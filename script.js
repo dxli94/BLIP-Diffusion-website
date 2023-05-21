@@ -1,3 +1,11 @@
+// import jsonData from "./data.json"
+
+// const originalImage = new Set(jsonData.originalImage)
+// const easy_images = jsonData.easy_images
+// const hard_images = jsonData.hard_images
+// const test_easy = jsonData.test_easy
+// const test_hard = jsonData.test_hard
+
 function renderHard(imageContainer, data) {
   imageContainer.innerHTML = ""
   for (let i = 0; i < data.length; i++) {
@@ -13,7 +21,7 @@ function renderEasy(imageContainer, data) {
   for (let i = 0; i < data.length; i++) {
     const img = document.createElement("img")
     img.src = data[i]
-    img.style.width = "200px"
+    img.style.width = "320px"
     imageContainer.appendChild(img)
     img.classList.add("images")
   }
@@ -25,15 +33,7 @@ const easy_images = [
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-  "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
 ]
-// const easy_data = {
-//   "./data/a-backpack-in-the-style-of-teddybear_0.jpg": true,
-//   "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg": false,
-//   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg": false,
-// }
-// const easy_images = Object.keys(easy_data)
-// console.log(easy_images)
 
 const hard_images = [
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
@@ -47,8 +47,7 @@ const hard_images = [
 ]
 const test_easy = [
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-  "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-  "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+  "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
 ]
 const test_hard = [
@@ -63,7 +62,7 @@ const test_hard = [
 ]
 
 const imageContainer = document.querySelectorAll(".imageContainer")
-console.log(imageContainer)
+
 const hardButton = document.querySelector(".hardButton")
 
 const easyButton = document.querySelector(".easyButton")
@@ -88,54 +87,22 @@ function addAdditionalPicture() {
   //     img.classList.add("images")
   //   }
   // })
-  const firstDate = imageContainer[0]
-  const secondDate = imageContainer[1]
-  renderHard(firstDate, hard_images)
-  renderHard(secondDate, test_hard)
+
+  renderHard(imageContainer[0], hard_images)
+  renderHard(imageContainer[1], test_hard)
 
   flipImg()
-
-  // for (let i = 0; i < test_hard.length; i++) {
-  //   const img = document.createElement("img")
-  //   img.src = test_hard[i]
-  //   img.style.width = "120px"
-  //   imageContainer.appendChild(img)
-  // }
 
   // Disable the button after adding the picture
   hardButton.disabled = true
   easyButton.disabled = false
 }
 function getInitialPicture() {
-  // imageContainer.forEach((imageContainer) => {
-  //   imageContainer.innerHTML = ""
-  //   for (let i = 0; i < easy_images.length; i++) {
-  //     let img = document.createElement("img")
-  //     img.src = easy_images[i]
-  //     img.style.width = "200px"
-  //     imageContainer.appendChild(img)
-
-  //     img.classList.add("images")
-  //     console.log(img)
-  //   }
-  // })
-  // imageContainer.forEach((imageContainer) => {
-  //   // imageContainer.classList.add("easyContainer")
-
-  // })
-  const firstDate = imageContainer[0]
-  const secondDate = imageContainer[1]
-  renderEasy(firstDate, easy_images)
-  renderEasy(secondDate, test_easy)
+  renderEasy(imageContainer[0], easy_images)
+  renderEasy(imageContainer[1], test_easy)
 
   flipImg()
 
-  // for (let i = 0; i < test_easy.length; i++) {
-  //   let img = document.createElement("img")
-  //   img.src = test_easy[i]
-  //   img.style.width = "200px"
-  //   imageContainer.appendChild(img)
-  // }
   hardButton.disabled = false
   easyButton.disabled = true
 }
@@ -146,7 +113,6 @@ easyButton.addEventListener("click", getInitialPicture)
 
 function flipImg() {
   const images = document.getElementsByClassName("images")
-  // console.log(images)
 
   for (let i = 0; i < images.length; i++) {
     images[i].addEventListener("click", flipImage)

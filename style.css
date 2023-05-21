@@ -190,29 +190,6 @@ img {
     0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
-/* .mode_choose {
-  appearance: button;
-  background-color: #1652f0;
-  border: 1px solid #1652f0;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  font-family: Graphik, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  line-height: 1.15;
-  overflow: visible;
-  padding: 5px 16px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: all 80ms ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-} */
 
 .mode_choose:disabled {
   opacity: 0.5;
@@ -220,51 +197,28 @@ img {
 }
 
 .imageContainer {
-  display: flex;
+  /* display: flex; */
   perspective: 1000px;
+  text-align: center;
 }
 .images {
   transition: transform 0.8s;
   margin-left: 4px;
   margin-bottom: 4px;
   /* transform-style: preserve-3d; */
-  /* backface-visibility: hidden; */
 }
 .flipped {
   transform: rotateY(180deg);
 }
+/* img{
+  text-align: center;
+} */
 
+/* .imageContainer {
+  width: 100%;
+  text-align: center;
+} */
 /* .box {
   width: 100%;
-  height: 50px;
-  position: relative;
-}
-.holder_position {
-  position: relative;
-  height: 300px;
-}
-.box .front,
-.box .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 1s;
-} */
-/* .box .front {
-  transform: perspective(1000px) rotateY(0deg);
-  z-index: 2;
-}
-.box .back {
-  transform: perspective(1000px) rotateY(180deg);
-  z-index: 1;
-}
-
-.click .front {
-  transform: perspective(1000px) rotateY(-180deg);
-  z-index: 1;
-}
-
-.click .back {
-  transform: perspective(1000px) rotateY(0deg);
-  z-index: 2;
+  text-align: center;
 } */
