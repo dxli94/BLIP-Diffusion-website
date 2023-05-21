@@ -205,7 +205,7 @@ img {
   transition: transform 0.8s;
   margin-left: 4px;
   margin-bottom: 4px;
-  /* transform-style: preserve-3d; */
+  transform-style: preserve-3d;
 }
 .flipped {
   transform: rotateY(180deg);
