@@ -40,11 +40,11 @@ const test_hard = [
 ]
 
 const imageContainer = document.querySelectorAll(".imageContainer")
-// console.log(imageContainer)
+console.log(imageContainer)
 const hardButton = document.querySelector(".hardButton")
 
 const easyButton = document.querySelector(".easyButton")
-
+addAdditionalPicture()
 // Function to add the additional picture
 function addAdditionalPicture() {
   // // Create a new image element
