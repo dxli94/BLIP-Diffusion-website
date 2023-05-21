@@ -210,15 +210,3 @@ img {
 .flipped {
   transform: rotateY(180deg);
 }
-/* img{
-  text-align: center;
-} */
-
-/* .imageContainer {
-  width: 100%;
-  text-align: center;
-} */
-/* .box {
-  width: 100%;
-  text-align: center;
-} */
