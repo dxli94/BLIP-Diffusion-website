@@ -1,8 +1,30 @@
+function renderHard(imageContainer, data) {
+  imageContainer.innerHTML = ""
+  for (let i = 0; i < data.length; i++) {
+    const img = document.createElement("img")
+    img.src = data[i]
+    img.style.width = "120px"
+    imageContainer.appendChild(img)
+    img.classList.add("images")
+  }
+}
+function renderEasy(imageContainer, data) {
+  imageContainer.innerHTML = ""
+  for (let i = 0; i < data.length; i++) {
+    const img = document.createElement("img")
+    img.src = data[i]
+    img.style.width = "200px"
+    imageContainer.appendChild(img)
+    img.classList.add("images")
+  }
+}
+
 const originalImage = new Set(["a-backpack-in-the-style-of-teddybear_0(1).jpg"])
 
 const easy_images = [
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+  "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
 ]
 // const easy_data = {
@@ -27,15 +49,16 @@ const test_easy = [
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+  "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
 ]
 const test_hard = [
   "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+  "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+  "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
   "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-  "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
-  "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
   "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
 ]
 
@@ -44,7 +67,7 @@ console.log(imageContainer)
 const hardButton = document.querySelector(".hardButton")
 
 const easyButton = document.querySelector(".easyButton")
-addAdditionalPicture()
+
 // Function to add the additional picture
 function addAdditionalPicture() {
   // // Create a new image element
@@ -55,16 +78,21 @@ function addAdditionalPicture() {
 
   // // Append the image to the container
   // imageContainer.appendChild(additionalImage)
-  imageContainer.forEach((imageContainer) => {
-    imageContainer.innerHTML = ""
-    for (let i = 0; i < hard_images.length; i++) {
-      const img = document.createElement("img")
-      img.src = hard_images[i]
-      img.style.width = "120px"
-      imageContainer.appendChild(img)
-      img.classList.add("images")
-    }
-  })
+  // imageContainer.forEach((imageContainer) => {
+  //   imageContainer.innerHTML = ""
+  //   for (let i = 0; i < hard_images.length; i++) {
+  //     const img = document.createElement("img")
+  //     img.src = hard_images[i]
+  //     img.style.width = "120px"
+  //     imageContainer.appendChild(img)
+  //     img.classList.add("images")
+  //   }
+  // })
+  const firstDate = imageContainer[0]
+  const secondDate = imageContainer[1]
+  renderHard(firstDate, hard_images)
+  renderHard(secondDate, test_hard)
+
   flipImg()
 
   // for (let i = 0; i < test_hard.length; i++) {
@@ -79,18 +107,26 @@ function addAdditionalPicture() {
   easyButton.disabled = false
 }
 function getInitialPicture() {
-  imageContainer.forEach((imageContainer) => {
-    imageContainer.innerHTML = ""
-    for (let i = 0; i < easy_images.length; i++) {
-      let img = document.createElement("img")
-      img.src = easy_images[i]
-      img.style.width = "200px"
-      imageContainer.appendChild(img)
+  // imageContainer.forEach((imageContainer) => {
+  //   imageContainer.innerHTML = ""
+  //   for (let i = 0; i < easy_images.length; i++) {
+  //     let img = document.createElement("img")
+  //     img.src = easy_images[i]
+  //     img.style.width = "200px"
+  //     imageContainer.appendChild(img)
 
-      img.classList.add("images")
-      console.log(img)
-    }
-  })
+  //     img.classList.add("images")
+  //     console.log(img)
+  //   }
+  // })
+  // imageContainer.forEach((imageContainer) => {
+  //   // imageContainer.classList.add("easyContainer")
+
+  // })
+  const firstDate = imageContainer[0]
+  const secondDate = imageContainer[1]
+  renderEasy(firstDate, easy_images)
+  renderEasy(secondDate, test_easy)
 
   flipImg()
 
@@ -144,3 +180,6 @@ function flipImg() {
 }
 
 flipImg()
+
+// for the first render
+addAdditionalPicture()
