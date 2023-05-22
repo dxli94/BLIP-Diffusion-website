@@ -82,11 +82,11 @@ fetch("data.json")
 
     // Function to add the additional picture
     function addAdditionalPicture() {
-      renderHard(imageContainer[0], d1_images_h1, jsonData.hard_captions1)
-      renderHard(imageContainer[1], d1_images_h2, jsonData.hard_captions2)
-      renderHard(imageContainer[2], d1_images_h3, jsonData.hard_captions2)
-      renderHard(imageContainer[3], d1_images_h4, jsonData.hard_captions2)
-      renderHard(imageContainer[4], d1_images_h5, jsonData.hard_captions2)
+      renderHard(imageContainer[0], d1_images_h1, jsonData.d1_captions_h1)
+      renderHard(imageContainer[1], d1_images_h2, jsonData.d1_captions_h2)
+      renderHard(imageContainer[2], d1_images_h3, jsonData.d1_captions_h3)
+      renderHard(imageContainer[3], d1_images_h4, jsonData.d1_captions_h4)
+      renderHard(imageContainer[4], d1_images_h5, jsonData.d1_captions_h5)
 
       // renderHard(imageContainer[0], hard_images, jsonData.hard_captions1)
       // renderHard(imageContainer[1], test_hard, jsonData.hard_captions2)
@@ -133,7 +133,12 @@ fetch("data.json")
           // Flip to a different image
           this.dataset.originalSrc = this.src // Store the original image source
           console.log(this.dataset.originalSrc)
-          if (originalImage.has(this.dataset.originalSrc.split("/").pop())) {
+          
+          let src_parts = this.dataset.originalSrc.split("/")
+          // remove first three elements
+          src_parts.splice(0, 3)
+
+          if (originalImage.has(src_parts.join("/"))) {
             this.src = "./data/true_mark.jpeg"
           } else {
             this.src = "./data/false.png"
