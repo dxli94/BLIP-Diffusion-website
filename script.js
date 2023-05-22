@@ -131,7 +131,7 @@ fetch("data.json")
           } else {
             this.src = "./data/false.png"
           }
-          this.src = "./data/true_mark.jpeg"
+          // this.src = "./data/true_mark.jpeg"
 
           // Replace with the new image source
         }
