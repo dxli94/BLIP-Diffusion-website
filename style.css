@@ -221,29 +221,35 @@ p code {
 /* css for the slide */
 .img-slider {
   display: flex;
+  justify-content: center;
   /* flex-direction: column; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .cat-main {
-  width: 50%;
+  width: 90%;
+  margin: 30px;
   /*height: 100%;*/
   /* display: flex;
   flex-direction: column; */
-  align-items: center;
-  /*justify-content: center;*/
-  margin-left: auto;
+  /* align-items: center;
+  justify-content: center; */
+  /* margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: auto; */
+  /* margin: 0; */
+  /* margin: 10px; */
 }
 
 .cat-img {
   /*vertical-align: middle;*/
   /*vertical-align: middle;*/
-  width: 90%;
+  width: 100%;
+  /* margin: 10px; */
   /*flex-basis: 40%*/
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* margin-right: 10px; */
 }
 
 .slider-container {
@@ -254,7 +260,7 @@ p code {
   margin-right: auto; */
   /* display: flex;
   flex-direction: column; */
-  width: 225%;
+  width: 250%;
 }
 
 .slider {
