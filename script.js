@@ -154,19 +154,44 @@ fetch("data.json")
     console.error("Error fetching JSON:", error)
   })
 
+// interp_images1 is a list of paths to 25 images
+// the first path is data/images-in-paper/demo2/interp1.jpg
+// the last path is data/images-in-paper/demo2/interp25.jpg
 const interp_images1 = [
-  "./data/x0y0.jpg",
-  "./data/x0y25.jpg",
-  "./data/x0y50.jpg",
-  "./data/x0y75.jpg",
-  "./data/x0y100.jpg",
+  "./data/images-in-paper/demo2/0-x0y0.jpg",
+  "./data/images-in-paper/demo2/1-x0y25.jpg",
+  "./data/images-in-paper/demo2/2-x0y50.jpg",
+  "./data/images-in-paper/demo2/3-x0y75.jpg",
+  "./data/images-in-paper/demo2/4-x0y100.jpg",
+  "./data/images-in-paper/demo2/5-x25y100.jpg",
+  "./data/images-in-paper/demo2/6-x50y100.jpg",
+  "./data/images-in-paper/demo2/7-x75y100.jpg",
+  "./data/images-in-paper/demo2/8-x100y100.jpg",
+  "./data/images-in-paper/demo2/9-x100y75.jpg",
+  "./data/images-in-paper/demo2/10-x100y50.jpg",
+  "./data/images-in-paper/demo2/11-x100y25.jpg",
+  "./data/images-in-paper/demo2/12-x100y0.jpg",
+]
+// add paths
+// for (let i = 1; i < 26; i++) {
+//   let path = `./data/images-in-paper/demo2/interp${i}.jpg`
+//   interp_images1.push(path)
+// }
+
+
+// const interp_images1 = [
+//   "./data/x0y0.jpg",
+//   "./data/x0y25.jpg",
+//   "./data/x0y50.jpg",
+//   "./data/x0y75.jpg",
+//   "./data/x0y100.jpg",
   // Add the paths of the remaining 16 images here
   // "./data/x0y20.jpg",
   // "./data/x0y25.jpg",
   // ...
   // "./data/x0y95.jpg",
   // "./data/x0y100.jpg"
-]
+// ]
 const interp_images2 = [
   "./data/x0y100.jpg",
   "./data/x0y75.jpg",
