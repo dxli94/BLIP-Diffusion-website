@@ -104,7 +104,7 @@ fetch("data.json")
     console.error("Error fetching JSON:", error)
   })
 
-var images = [
+const interp_images1 = [
   "./data/x0y0.jpg",
   "./data/x0y25.jpg",
   "./data/x0y50.jpg",
@@ -117,14 +117,35 @@ var images = [
   // "./data/x0y95.jpg",
   // "./data/x0y100.jpg"
 ]
-let image = document.getElementById("cat-img")
-let slider = document.getElementById("range_cat")
+const interp_images2 = [
+  "./data/x0y100.jpg",
+  "./data/x0y75.jpg",
+  "./data/x0y0.jpg",
+  "./data/x0y25.jpg",
+  "./data/x0y50.jpg",
+
+  // Add the paths of the remaining 16 images here
+  // "./data/x0y20.jpg",
+  // "./data/x0y25.jpg",
+  // ...
+  // "./data/x0y95.jpg",
+  // "./data/x0y100.jpg"
+]
+const image1 = document.getElementById("interp-img1")
+const slider1 = document.getElementById("interp-range1")
+const image2 = document.getElementById("interp-img2")
+const slider2 = document.getElementById("interp-range2")
 
 // Function to change the image source based on the slider value
-function changeImage() {
+function changeImage(slider, image, images) {
   let index = parseInt(slider.value)
   image.src = images[index]
 }
 
 // Event listener for the slider input
-slider.addEventListener("input", changeImage)
+slider1.addEventListener("input", () =>
+  changeImage(slider1, image1, interp_images1)
+)
+slider2.addEventListener("input", () =>
+  changeImage(slider2, image2, interp_images2)
+)
