@@ -1,38 +1,92 @@
 {
   "originalImage": ["a-backpack-in-the-style-of-teddybear_0(1).jpg"],
-  "easy_images": [
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg"
+  "d1_images_e1": [
+    "data/images-in-paper/demo1/backpack-dog/in-the-snow3.jpg",
+    "data/images-in-paper/demo1/backpack-dog/on-a-cobblestone-street3.jpg",
+    "data/images-in-paper/demo1/backpack-dog/03.jpg",
+    "data/images-in-paper/demo1/backpack-dog/on-the-beach2.jpg"
   ],
-  "easy_captions1": [1, 2, 3],
-  "hard_images": [
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg"
+  "d1_captions_e1": [
+    "A backpack in the snow.", 
+    "A backpack on a cobblestone street.",
+    "A backpack in a forest.",
+    "A backpack on the beach."
+  ],
+  "d1_images_h1": [
+    "data/images-in-paper/demo1/backpack-dog/in-the-snow3.jpg",
+    "data/images-in-paper/demo1/backpack-dog/on-a-cobblestone-street3.jpg",
+    "data/images-in-paper/demo1/backpack-dog/on-the-beach2.jpg",
+    "data/images-in-paper/demo1/backpack-dog/on-top-of-a-dirt-road1.jpg",
+    "data/images-in-paper/demo1/backpack-dog/on-top-of-a-white-rug2.jpg",
+    "data/images-in-paper/demo1/backpack-dog/03.jpg",
+    "data/images-in-paper/demo1/backpack-dog/coloured-purple1.jpg",
+    "data/images-in-paper/demo1/backpack-dog/coloured-red2.jpg"
+  ],
+  "d1_images_e2": [
+    "data/images-in-paper/demo1/teapot/in-the-jungle1.jpg",
+    "data/images-in-paper/demo1/teapot/01.jpg",
+    "data/images-in-paper/demo1/teapot/with-a-tree-and-autumn-leaves-in-the-background0.jpg",
+    "data/images-in-paper/demo1/teapot/with-a-wheat-field-in-the-background3.jpg"
+  ],
+  "d1_captions_e2": [
+    "A teapot in the jungle.",
+    "A teapot on a table.",
+    "A teapot with a tree and autumn leaves in the background.",
+    "A teapot with a wheat field in the background."
+  ],
+  "d1_images_h2": [
+    "data/images-in-paper/demo1/teapot/in-the-jungle1.jpg",
+    "data/images-in-paper/demo1/teapot/floating-on-top-of-water1.jpg",
+    "data/images-in-paper/demo1/teapot/on-top-of-a-mirror1.jpg",
+    "data/images-in-paper/demo1/teapot/on-top-of-pink-fabric2.jpg",
+    "data/images-in-paper/demo1/teapot/01.jpg",
+    "data/images-in-paper/demo1/teapot/with-a-tree-and-autumn-leaves-in-the-background0.jpg",
+    "data/images-in-paper/demo1/teapot/with-a-wheat-field-in-the-background3.jpg",
+    "data/images-in-paper/demo1/teapot/with-the-Eiffel-Tower-in-the-background3.jpg"
+  ],
+  "d1_images_e3": [
+    "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
+    "data/images-in-paper/demo1/dog/wearing-a-santa-hat1.jpg",
+    "data/images-in-paper/demo1/dog/in-the-snow2.jpg",
+    "data/images-in-paper/demo1/dog/04.jpg"
+  ],
+  "d1_captions_e3": [
+    "A cube-shaped dog.",
+    "A dog wearing a Santa hat.",
+    "A dog in the snow.",
+    "A dog on the sidewalk of a street."
+  ],
+  "d1_images_h3": [
+    "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
+    "data/images-in-paper/demo1/dog/in-a-chef-outfit0.jpg",
+    "data/images-in-paper/demo1/dog/in-a-firefighter-outfit1.jpg",
+    "data/images-in-paper/demo1/dog/04.jpg",
+    "data/images-in-paper/demo1/dog/in-the-jungle1.jpg",
+    "data/images-in-paper/demo1/dog/in-the-snow2.jpg",
+    "data/images-in-paper/demo1/dog/wearing-a-santa-hat1.jpg",
+    "data/images-in-paper/demo1/dog/with-a-blue-house-in-the-background3.jpg"
+  ],
+  "d1_images_h4": [
+    "data/images-in-paper/demo1/clock/in-the-jungle1.jpg",
+    "data/images-in-paper/demo1/clock/on-top-of-a-dirt-road2.jpg",
+    "data/images-in-paper/demo1/clock/on-top-of-a-white-rug1.jpg",
+    "data/images-in-paper/demo1/clock/05.jpg",
+    "data/images-in-paper/demo1/clock/on-top-of-pink-fabric2.jpg",
+    "data/images-in-paper/demo1/clock/with-a-city-in-the-background2.jpg",
+    "data/images-in-paper/demo1/clock/with-a-mountain-in-the-background3.jpg",
+    "data/images-in-paper/demo1/clock/on-the-beach2.jpg"
+  ],
+  "d1_images_h5": [
+    "data/images-in-paper/demo1/pink-glasses/on-top-of-a-white-rug1.jpg",
+    "data/images-in-paper/demo1/pink-glasses/coloured-purple0.jpg",
+    "data/images-in-paper/demo1/pink-glasses/with-a-wheat-field-in-the-background0.jpg",
+    "data/images-in-paper/demo1/pink-glasses/on-a-cobblestone-street3.jpg",
+    "data/images-in-paper/demo1/pink-glasses/in-the-snow1.jpg",
+    "data/images-in-paper/demo1/pink-glasses/01.jpg",
+    "data/images-in-paper/demo1/pink-glasses/on-top-of-pink-fabric1.jpg",
+    "data/images-in-paper/demo1/pink-glasses/on-top-of-a-mirror3.jpg"
   ],
   "hard_captions1": [1, 2, 3, 4, 5, 5, 6, 5],
-  "test_easy": [
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg"
-  ],
-  "easy_captions2": ["on the snow", "in the forest", "ok"],
-  "test_hard": [
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
-    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
-    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg"
-  ],
   "hard_captions2": [
     "on the snow",
     "in the forest",

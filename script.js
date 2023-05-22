@@ -4,10 +4,18 @@ fetch("data.json")
   .then((response) => response.json())
   .then((jsonData) => {
     const originalImage = new Set(jsonData.originalImage)
-    const easy_images = jsonData.easy_images
-    const hard_images = jsonData.hard_images
-    const test_easy = jsonData.test_easy
-    const test_hard = jsonData.test_hard
+    // const easy_images = jsonData.easy_images
+    // const hard_images = jsonData.hard_images
+    // const test_easy = jsonData.test_easy
+    // const test_hard = jsonData.test_hard
+    const d1_images_e1 = jsonData.d1_images_e1
+    const d1_images_h1 = jsonData.d1_images_h1
+    const d1_images_e2 = jsonData.d1_images_e2
+    const d1_images_h2 = jsonData.d1_images_h2
+    const d1_images_e3 = jsonData.d1_images_e3
+    const d1_images_h3 = jsonData.d1_images_h3
+    const d1_images_h4 = jsonData.d1_images_h4
+    const d1_images_h5 = jsonData.d1_images_h5
 
     function renderHard(imageContainer, data, caption) {
       imageContainer.innerHTML = ""
@@ -19,6 +27,10 @@ fetch("data.json")
         const imgText = document.createElement("div")
         imgText.textContent = caption[i]
         imgText.style.textAlign = "center"
+        // add a slight margin below the image
+        imgText.style.marginBottom = "10px"
+        // make font size larger
+        imgText.style.fontSize = "15px"
 
         img.src = data[i]
         img.style.width = "120px"
@@ -46,11 +58,17 @@ fetch("data.json")
         const imgText = document.createElement("div")
         imgText.textContent = caption[i]
         imgText.style.textAlign = "center"
+        // add a 10px margin below the image
+        imgText.style.marginBottom = "10px"
+        // make font size larger
+        imgText.style.fontSize = "20px"
 
         img.src = data[i]
-        img.style.width = "320px"
+        img.style.width = "245px"
+        // imageContainer.appendChild(img)
         picContainer.appendChild(img)
         picContainer.appendChild(imgText)
+
         img.classList.add("images")
         imageContainer.appendChild(picContainer)
       }
@@ -64,8 +82,14 @@ fetch("data.json")
 
     // Function to add the additional picture
     function addAdditionalPicture() {
-      renderHard(imageContainer[0], hard_images, jsonData.hard_captions1)
-      renderHard(imageContainer[1], test_hard, jsonData.hard_captions2)
+      renderHard(imageContainer[0], d1_images_h1, jsonData.hard_captions1)
+      renderHard(imageContainer[1], d1_images_h2, jsonData.hard_captions2)
+      renderHard(imageContainer[2], d1_images_h3, jsonData.hard_captions2)
+      renderHard(imageContainer[3], d1_images_h4, jsonData.hard_captions2)
+      renderHard(imageContainer[4], d1_images_h5, jsonData.hard_captions2)
+
+      // renderHard(imageContainer[0], hard_images, jsonData.hard_captions1)
+      // renderHard(imageContainer[1], test_hard, jsonData.hard_captions2)
 
       flipImg()
 
@@ -74,8 +98,14 @@ fetch("data.json")
       easyButton.disabled = false
     }
     function getInitialPicture() {
-      renderEasy(imageContainer[0], easy_images, jsonData.easy_captions1)
-      renderEasy(imageContainer[1], test_easy, jsonData.easy_captions2)
+      renderEasy(imageContainer[0], d1_images_e1, jsonData.d1_captions_e1)
+      renderEasy(imageContainer[1], d1_images_e2, jsonData.d1_captions_e2)
+      renderEasy(imageContainer[2], d1_images_e3, jsonData.d1_captions_e3)
+      // clear the last image
+      imageContainer[3].innerHTML = ""
+      imageContainer[4].innerHTML = ""
+      // renderEasy(imageContainer[0], easy_images, jsonData.easy_captions1)
+      // renderEasy(imageContainer[1], test_easy, jsonData.easy_captions2)
 
       flipImg()
 
