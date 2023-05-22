@@ -114,8 +114,8 @@
         dataset. Each row shows the results of a different subject. Benefiting
         from the pre-traiend subject representation, our model shows superior
         fine-tuning efficiency and high subject fidelity. For example, our model
-        requires on average less than 80 steps for generic subjects, as opposed
-        to DreamBooth (600-1200 steps) and Textual Inversion (~3000 steps).
+        requires on average less than 80 steps for generic subjects, less than 40 steps for certain subjects, as opposed
+        to DreamBooth (600-1200 steps) and Textual Inversion (~3000 steps), a 10-20x higher fine-tuning efficiency.
       </p>
       <h3>Mini Challenge: Can You Guess It Right?</h3>
       <p>
@@ -228,34 +228,12 @@
     <div class="content">
       <h2 style="text-align: center;">Approach</h2>
       <p>
-
         Central to our approach is the novel concept of <strong>pre-trained subject representation</strong>. We first pre-train the multimodal encoder following BLIP-2 to produce visual representation aligned with the text. Then we design a subject representation learning task, called prompted context generation, which enables a diffusion model to leverage such visual representation and generates new subject renditions. Compared with previous methods such as DreamBooth, our model enables zero-shot subject-driven generation, and efficient fine-tuning for customized subject with up to 20x speedup. We also demonstrate that BLIP-Diffusion can be flexibly combined with existing techniques such as ControlNet and prompt-to-prompt to enable novel subject-driven generation and editing applications.
       </p>
       <br />
       <img
         class="summary-img"/
         src="./data/images-in-paper/arch.jpg"
-        style="width: 100%"
-      />
-      <br />
-      <p>
-        Given ~3-5 images of a subject we fine tune a text-to-image diffusion in
-        two steps: (a) fine tuning the low-resolution text-to-image model with
-        the input images paired with a text prompt containing a unique
-        identifier and the name of the class the subject belongs to (e.g., "A
-        photo of a [T] dog”), in parallel, we apply a class-specific prior
-        preservation loss, which leverages the semantic prior that the model has
-        on the class and encourages it to generate diverse instances belong to
-        the subject's class by injecting the class name in the text prompt
-        (e.g., "A photo of a dog”). (b) fine-tuning the super resolution
-        components with pairs of low-resolution and high-resolution images taken
-        from our input images set, which enables us to maintain high-fidelity to
-        small details of the subject.
-      </p>
-      <br />
-      <img
-        class="summary-img"
-        src="./DreamBooth_files/system.png"
         style="width: 100%"
       />
       <br />
