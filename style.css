@@ -227,7 +227,7 @@ p code {
 }
 .cat-main {
   width: 90%;
-  margin: 30px;
+  margin: -15px 30px 30px 30px;
   /*height: 100%;*/
   /* display: flex;
   flex-direction: column; */
@@ -260,7 +260,7 @@ p code {
   margin-right: auto; */
   /* display: flex;
   flex-direction: column; */
-  width: 250%;
+  width: 249%;
 }
 
 .slider {
