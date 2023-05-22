@@ -1,0 +1,33 @@
+{
+  "originalImage": ["a-backpack-in-the-style-of-teddybear_0(1).jpg"],
+  "easy_images": [
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg"
+  ],
+  "hard_images": [
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg"
+  ],
+  "test_easy": [
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg"
+  ],
+  "test_hard": [
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
+    "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
+    "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg"
+  ]
+}
