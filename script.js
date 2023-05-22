@@ -103,3 +103,28 @@ fetch("data.json")
   .catch((error) => {
     console.error("Error fetching JSON:", error)
   })
+
+var images = [
+  "./data/x0y0.jpg",
+  "./data/x0y25.jpg",
+  "./data/x0y50.jpg",
+  "./data/x0y75.jpg",
+  "./data/x0y100.jpg",
+  // Add the paths of the remaining 16 images here
+  // "./data/x0y20.jpg",
+  // "./data/x0y25.jpg",
+  // ...
+  // "./data/x0y95.jpg",
+  // "./data/x0y100.jpg"
+]
+let image = document.getElementById("cat-img")
+let slider = document.getElementById("range_cat")
+
+// Function to change the image source based on the slider value
+function changeImage() {
+  let index = parseInt(slider.value)
+  image.src = images[index]
+}
+
+// Event listener for the slider input
+slider.addEventListener("input", changeImage)
