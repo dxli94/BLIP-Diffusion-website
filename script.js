@@ -41,14 +41,6 @@ fetch("data.json")
       }
     }
     function renderEasy(imageContainer, data, caption) {
-      // imageContainer.innerHTML = ""
-      // for (let i = 0; i < data.length; i++) {
-      //   const img = document.createElement("img")
-      //   img.src = data[i]
-      //   img.style.width = "320px"
-      //   imageContainer.appendChild(img)
-      //   img.classList.add("images")
-      // }
       imageContainer.innerHTML = ""
       for (let i = 0; i < data.length; i++) {
         const picContainer = document.createElement("div")
@@ -114,8 +106,8 @@ fetch("data.json")
     }
 
     // Add event listener to the button
-    hardButton.addEventListener("click", addAdditionalPicture)
     easyButton.addEventListener("click", getInitialPicture)
+    hardButton.addEventListener("click", addAdditionalPicture)
 
     function flipImg() {
       const images = document.getElementsByClassName("images")
@@ -138,6 +130,7 @@ fetch("data.json")
           } else {
             this.src = "./data/false.png"
           }
+          this.src = "./data/true_mark.jpeg"
 
           // Replace with the new image source
         }
@@ -154,7 +147,7 @@ fetch("data.json")
     flipImg()
 
     // for the first render
-    addAdditionalPicture()
+    getInitialPicture()
   })
   .catch((error) => {
     console.error("Error fetching JSON:", error)
