@@ -90,10 +90,22 @@
         Demo I: Subject-driven Text-to-Image Generation
       </h2>
       <p>
-        Given a few images of a subject, our model can generate novel renditions of the subject based on text prompts. The following examples show such subject-driven text-to-image generation results on the DreamBooth dataset. Each row shows the results of a different subject. Benefiting from the pre-traiend subject representation, our model shows superior fine-tuning efficiency and high subject fidelity. For example, our model requires on average less than 80 steps for generic subjects, as opposed to DreamBooth (600-1200 steps) and Textual Inversion (~3000 steps). 
+        Given a few images of a subject, our model can generate novel renditions
+        of the subject based on text prompts. The following examples show such
+        subject-driven text-to-image generation results on the DreamBooth
+        dataset. Each row shows the results of a different subject. Benefiting
+        from the pre-traiend subject representation, our model shows superior
+        fine-tuning efficiency and high subject fidelity. For example, our model
+        requires on average less than 80 steps for generic subjects, as opposed
+        to DreamBooth (600-1200 steps) and Textual Inversion (~3000 steps).
       </p>
-      <h3> Mini Challenge: Can You Guess It Right? </h3>
-      <p>To showcase the subject fidelity, we create the following challenge, where in each row, we mix one geniune subject image with generations from our model. Can you guess which one is the geniune subject image? <strong>Click the image to find out the answer!</strong> Change the display mode to adjust number of generations.
+      <h3>Mini Challenge: Can You Guess It Right?</h3>
+      <p>
+        To showcase the subject fidelity, we create the following challenge,
+        where in each row, we mix one geniune subject image with generations
+        from our model. Can you guess which one is the geniune subject image?
+        <strong>Click the image to find out the answer!</strong> Change the
+        display mode to adjust number of generations.
       </p>
       <div class="select" style="margin-bottom: 10px">
         <span style="font-size: 16px">Display Mode: </span>
@@ -111,11 +123,17 @@
     </div>
     <div class="content">
       <h2 style="text-align: center">
-        Demo II: Zero-shot Subject-driven Image Manipulation 
+        Demo II: Zero-shot Subject-driven Image Manipulation
       </h2>
       <div class="img-slider">
         <div class="cat-main">
-          <img class="cat-img" id="interp-img1" src="./data/x0y0.jpg" />
+          <p style="margin: 0; text-align: center; font-size: 1.5rem">title</p>
+          <img
+            class="cat-img"
+            id="interp-img1"
+            src="./data/x0y0.jpg"
+            style="margin-top: 5px"
+          />
           <div class="slider-container">
             <input
               type="range"
@@ -127,12 +145,20 @@
             />
             <div class="img-container">
               <img class="first-img" src="./data/x0y0.jpg" />
+              <img class="first-img" src="./data/x0y0.jpg" />
+              <img class="last-img" src="./data/x0y100.jpg" />
               <img class="last-img" src="./data/x0y100.jpg" />
             </div>
           </div>
         </div>
         <div class="cat-main">
-          <img class="cat-img" id="interp-img2" src="./data/x0y0.jpg" />
+          <p style="margin: 0; text-align: center; font-size: 1.5rem">title</p>
+          <img
+            class="cat-img"
+            style="margin-top: 5px"
+            id="interp-img2"
+            src="./data/x0y0.jpg"
+          />
           <div class="slider-container">
             <input
               type="range"
@@ -144,6 +170,8 @@
             />
             <div class="img-container">
               <img class="first-img" src="./data/x0y0.jpg" />
+              <img class="first-img" src="./data/x0y0.jpg" />
+              <img class="last-img" src="./data/x0y100.jpg" />
               <img class="last-img" src="./data/x0y100.jpg" />
             </div>
           </div>
@@ -324,7 +352,7 @@
       <br />
     </div> -->
     <div class="content">
-      <h2 style="text-align:center">Ethical and Responsible Use</h2>
+      <h2 style="text-align: center">Ethical and Responsible Use</h2>
       <p>
         Image generation models are susceptible to be used as tools for
         generating false content or prompting misinformation. Subject-driven

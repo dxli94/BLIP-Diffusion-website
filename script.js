@@ -197,13 +197,6 @@ const interp_images2 = [
   "./data/x0y0.jpg",
   "./data/x0y25.jpg",
   "./data/x0y50.jpg",
-
-  // Add the paths of the remaining 16 images here
-  // "./data/x0y20.jpg",
-  // "./data/x0y25.jpg",
-  // ...
-  // "./data/x0y95.jpg",
-  // "./data/x0y100.jpg"
 ]
 const image1 = document.getElementById("interp-img1")
 const slider1 = document.getElementById("interp-range1")
