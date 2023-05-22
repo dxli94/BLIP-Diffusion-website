@@ -89,19 +89,31 @@
     <div class="content">
       <h2 style="text-align: center">Background and Motivation</h2>
       <p>
-        Natural language prompts are usually effective to specify generic image content.
-        Yet, they can be inadequate to accurately describe highly customized visual concepts, or the novel ones that are not acquaint to the underlying text-to-image
-        image. One example is to generate a cool oil painting of your pet puppey, who has unique back markings. 
-        Instead of describing the markings in text, it is more clarified to just show the model a few images of the puppey as conditions.
-        Another case is that imagine you are using an AI interior design assistant to decorate your new house. Instead of describing the interior design style you like in text, it is more effective to show the model a few photos of the style you like.
-        Both cases motivate the use of multimodal inputs, as a complementary source of information to guide the generation process.
+        Natural language prompts are usually effective to specify generic image
+        content. Yet, they can be inadequate to accurately describe highly
+        customized visual concepts, or the novel ones that are not acquaint to
+        the underlying text-to-image image. One example is to generate a cool
+        oil painting of your pet puppey, who has unique back markings. Instead
+        of describing the markings in text, it is more clarified to just show
+        the model a few images of the puppey as conditions. Another case is that
+        imagine you are using an AI interior design assistant to decorate your
+        new house. Instead of describing the interior design style you like in
+        text, it is more effective to show the model a few photos of the style
+        you like. Both cases motivate the use of multimodal inputs, as a
+        complementary source of information to guide the generation process.
 
         <br />
         <br />
-        However, existing text-to-image generation models are not designed to support such multimodal conditions. This leads to inefficiency to adapt them in related
-        applications, such as the task of subject-driven text-to-image generation.
-        In addition, having multimodal conditions enhances the controllability of the generation process - highly desirable for real-world generative AI applications. As such, we propose BLIP-Diffusion, a new subject-driven image generation model with built-in support for multimodal conditions, bringing high-level controllability to diffusion models.
-        In the following, we show demos and explains the technical details of BLIP-Diffusion.
+        However, existing text-to-image generation models are not designed to
+        support such multimodal conditions. This leads to inefficiency to adapt
+        them in related applications, such as the task of subject-driven
+        text-to-image generation. In addition, having multimodal conditions
+        enhances the controllability of the generation process - highly
+        desirable for real-world generative AI applications. As such, we propose
+        BLIP-Diffusion, a new subject-driven image generation model with
+        built-in support for multimodal conditions, bringing high-level
+        controllability to diffusion models. In the following, we show demos and
+        explains the technical details of BLIP-Diffusion.
       </p>
     </div>
     <div class="content">
@@ -115,8 +127,10 @@
         dataset. Each row shows the results of a different subject. Benefiting
         from the pre-traiend subject representation, our model shows superior
         fine-tuning efficiency and high subject fidelity. For example, our model
-        requires on average less than 80 steps for generic subjects, less than 40 steps for certain subjects, as opposed
-        to DreamBooth (600-1200 steps) and Textual Inversion (~3000 steps), a 10-20x higher fine-tuning efficiency.
+        requires on average less than 80 steps for generic subjects, less than
+        40 steps for certain subjects, as opposed to DreamBooth (600-1200 steps)
+        and Textual Inversion (~3000 steps), a 10-20x higher fine-tuning
+        efficiency.
       </p>
       <h3>Mini Challenge: Can You Guess It Right?</h3>
       <p>
@@ -146,7 +160,18 @@
       </h2>
       <div class="img-slider">
         <div class="cat-main">
-          <i><p style="margin: 6px; margin-top: 15px; text-align: center; font-size: 1.5rem">Subject Interpolation</p></i>
+          <i
+            ><p
+              style="
+                margin: 6px;
+                margin-top: 15px;
+                text-align: center;
+                font-size: 1.5rem;
+              "
+            >
+              Subject Interpolation
+            </p></i
+          >
           <img
             class="cat-img"
             id="interp-img1"
@@ -163,10 +188,22 @@
               id="interp-range1"
             />
             <div class="img-container">
-              <img class="first-img" src="./data/images-in-paper/demo2/dog7.jpg" />
-              <img class="first-img" src="./data/images-in-paper/demo2/cat2.jpg" />
-              <img class="last-img" src="./data/images-in-paper/demo2/cat.jpg" />
-              <img class="last-img" src="./data/images-in-paper/demo2/dog3.jpg" />
+              <img
+                class="first-img"
+                src="./data/images-in-paper/demo2/dog7.jpg"
+              />
+              <img
+                class="first-img"
+                src="./data/images-in-paper/demo2/cat2.jpg"
+              />
+              <img
+                class="last-img"
+                src="./data/images-in-paper/demo2/cat.jpg"
+              />
+              <img
+                class="last-img"
+                src="./data/images-in-paper/demo2/dog3.jpg"
+              />
             </div>
           </div>
         </div>
@@ -187,6 +224,7 @@
               <img class="left-img" src="./data/x0y0.jpg" />
               <img class="left-img" src="./data/x0y0.jpg" />
               <img class="left-img" src="./data/x0y0.jpg" />
+              <p style="text-align: center; margin: 5px">Reference Subjects</p>
             </div>
             <div class="output-image">
               <img
@@ -204,13 +242,11 @@
                 <img class="last-img" src="./data/x0y100.jpg" />
                 <img class="last-img" src="./data/x0y100.jpg" />
                 <!-- <p> -->
-                  <!-- fdas -->
+                <!-- fdas -->
                 <!-- </p> -->
               </div>
             </div>
           </div>
-
-      
         </div>
       </div>
     </div>
@@ -246,12 +282,20 @@
     <div class="content">
       <h2 style="text-align: center">Approach</h2>
       <p>
-<<<<<<< HEAD
-        Central to our approach is the novel concept of <strong>pre-trained subject representation</strong>. We first pre-train the multimodal encoder following BLIP-2 to produce visual representation aligned with the text. Then we design a subject representation learning task, called prompted context generation, which enables a diffusion model to leverage such visual representation and generates new subject renditions. Compared with previous methods such as DreamBooth, our model enables zero-shot subject-driven generation, and efficient fine-tuning for customized subject with up to 20x speedup. We also demonstrate that BLIP-Diffusion can be flexibly combined with existing techniques such as ControlNet and prompt-to-prompt to enable novel subject-driven generation and editing applications.
-=======
-        Central to our approach is the novel concept of
-        <strong></strong>pre-trained subject representation.
->>>>>>> beb0e94966f70c56d361289dcf6069146d0ec2bd
+        <<<<<<< HEAD Central to our approach is the novel concept of
+        <strong>pre-trained subject representation</strong>. We first pre-train
+        the multimodal encoder following BLIP-2 to produce visual representation
+        aligned with the text. Then we design a subject representation learning
+        task, called prompted context generation, which enables a diffusion
+        model to leverage such visual representation and generates new subject
+        renditions. Compared with previous methods such as DreamBooth, our model
+        enables zero-shot subject-driven generation, and efficient fine-tuning
+        for customized subject with up to 20x speedup. We also demonstrate that
+        BLIP-Diffusion can be flexibly combined with existing techniques such as
+        ControlNet and prompt-to-prompt to enable novel subject-driven
+        generation and editing applications. ======= Central to our approach is
+        the novel concept of <strong></strong>pre-trained subject
+        representation. >>>>>>> beb0e94966f70c56d361289dcf6069146d0ec2bd
       </p>
       <br />
       <img class="summary-img"/ src="./data/images-in-paper/arch.jpg"
