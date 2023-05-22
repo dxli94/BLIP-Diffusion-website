@@ -152,9 +152,9 @@ p code {
   width: 40px;
 }
 
-img {
+/* img {
   width: 200px;
-}
+} */
 
 /* .mode_choose {
   width: 80px;
@@ -197,9 +197,15 @@ img {
 }
 
 .imageContainer {
-  /* display: flex; */
+  display: flex;
   perspective: 1000px;
   text-align: center;
+}
+.picContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5px;
 }
 .images {
   transition: transform 0.8s;

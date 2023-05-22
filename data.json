@@ -5,6 +5,7 @@
     "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
     "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg"
   ],
+  "easy_captions1": [1, 2, 3],
   "hard_images": [
     "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
     "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
@@ -15,11 +16,13 @@
     "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
     "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg"
   ],
+  "hard_captions1": [1, 2, 3, 4, 5, 5, 6, 5],
   "test_easy": [
     "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
     "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg",
     "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg"
   ],
+  "easy_captions2": ["on the snow", "in the forest", "ok"],
   "test_hard": [
     "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
     "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
@@ -29,5 +32,15 @@
     "./data/a-backpack-in-the-style-of-teddybear_0.jpg",
     "./data/a-backpack-in-the-style-of-tortoise-plushy_2(2).jpg",
     "./data/a-backpack-in-the-style-of-teddybear_0(1).jpg"
+  ],
+  "hard_captions2": [
+    "on the snow",
+    "in the forest",
+    "ok",
+    4,
+    5,
+    3,
+    "in the ocean",
+    "the bear is so cute lying on the grass"
   ]
 }
