@@ -1,5 +1,4 @@
 {
-  "originalImage": ["a-backpack-in-the-style-of-teddybear_0(1).jpg"],
   "d1_images_e1": [
     "data/images-in-paper/demo1/backpack-dog/in-the-snow3.jpg",
     "data/images-in-paper/demo1/backpack-dog/on-a-cobblestone-street3.jpg",
@@ -21,6 +20,16 @@
     "data/images-in-paper/demo1/backpack-dog/03.jpg",
     "data/images-in-paper/demo1/backpack-dog/coloured-purple1.jpg",
     "data/images-in-paper/demo1/backpack-dog/coloured-red2.jpg"
+  ],
+  "d1_captions_h1": [
+    "A backpack in the snow.",
+    "A backpack on a cobblestone street.",
+    "A backpack on the beach.",
+    "A backpack on top of a dirt road.",
+    "A backpack on top of a white rug.",
+    "A backpack in a forest.",
+    "A purple backpack.",
+    "A red backpack."
   ],
   "d1_images_e2": [
     "data/images-in-paper/demo1/teapot/in-the-jungle1.jpg",
@@ -44,6 +53,16 @@
     "data/images-in-paper/demo1/teapot/with-a-wheat-field-in-the-background3.jpg",
     "data/images-in-paper/demo1/teapot/with-the-Eiffel-Tower-in-the-background3.jpg"
   ],
+  "d1_captions_h2": [
+    "A teapot in the jungle.",
+    "A teapot floating on top of water.",
+    "A teapot on top of a mirror.",
+    "A teapot on top of pink fabric.",
+    "A teapot on a table.",
+    "A teapot with a tree and autumn leaves in the background.",
+    "A teapot with a wheat field in the background.",
+    "A teapot with the Eiffel Tower in the background."
+  ],
   "d1_images_e3": [
     "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
     "data/images-in-paper/demo1/dog/wearing-a-santa-hat1.jpg",
@@ -66,6 +85,16 @@
     "data/images-in-paper/demo1/dog/wearing-a-santa-hat1.jpg",
     "data/images-in-paper/demo1/dog/with-a-blue-house-in-the-background3.jpg"
   ],
+  "d1_captions_h3": [
+    "A cube-shaped dog.",
+    "A dog in a chef outfit.",
+    "A dog in a firefighter outfit.",
+    "A dog on the sidewalk of a street.",
+    "A dog in the jungle.",
+    "A dog in the snow.",
+    "A dog wearing a Santa hat.",
+    "A dog with a blue house in the background."
+  ],
   "d1_images_h4": [
     "data/images-in-paper/demo1/clock/in-the-jungle1.jpg",
     "data/images-in-paper/demo1/clock/on-top-of-a-dirt-road2.jpg",
@@ -75,6 +104,16 @@
     "data/images-in-paper/demo1/clock/with-a-city-in-the-background2.jpg",
     "data/images-in-paper/demo1/clock/with-a-mountain-in-the-background3.jpg",
     "data/images-in-paper/demo1/clock/on-the-beach2.jpg"
+  ],
+  "d1_captions_h4": [
+    "A clock in the jungle.",
+    "A clock on top of a dirt road.",
+    "A clock on top of a white rug.",
+    "A clock on a bed.",
+    "A clock on top of pink fabric.",
+    "A clock with a city in the background.",
+    "A clock with a mountain in the background.",
+    "A clock on the beach."
   ],
   "d1_images_h5": [
     "data/images-in-paper/demo1/pink-glasses/on-top-of-a-white-rug1.jpg",
@@ -86,15 +125,21 @@
     "data/images-in-paper/demo1/pink-glasses/on-top-of-pink-fabric1.jpg",
     "data/images-in-paper/demo1/pink-glasses/on-top-of-a-mirror3.jpg"
   ],
-  "hard_captions1": [1, 2, 3, 4, 5, 5, 6, 5],
-  "hard_captions2": [
-    "on the snow",
-    "in the forest",
-    "ok",
-    4,
-    5,
-    3,
-    "in the ocean",
-    "the bear is so cute lying on the grass"
+  "d1_captions_h5": [
+    "glasses on top of a white rug.",
+    "purple glasses.",
+    "glasses with a wheat field in the background.",
+    "glasses on a cobblestone street.",
+    "glasses in the snow.",
+    "glasses on the ground.",
+    "glasses on top of pink fabric.",
+    "glasses on top of a mirror."
+  ],
+  "originalImage": [
+    "data/images-in-paper/demo1/backpack-dog/03.jpg",
+    "data/images-in-paper/demo1/teapot/01.jpg",
+    "data/images-in-paper/demo1/dog/04.jpg",
+    "data/images-in-paper/demo1/clock/05.jpg",
+    "data/images-in-paper/demo1/pink-glasses/01.jpg"
   ]
 }
