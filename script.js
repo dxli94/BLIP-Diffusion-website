@@ -127,9 +127,9 @@ fetch("data.json")
           console.log(this.dataset.originalSrc)
 
           if (originalImage.has(this.dataset.originalSrc.split("/").pop())) {
-            this.src = "./data/true_mark.jpeg"
+            this.src = "./data/true_mark_reverse.png"
           } else {
-            this.src = "./data/false.png"
+            this.src = "./data/false-reverse.png"
           }
           // this.src = "./data/true_mark.jpeg"
 
