@@ -1,0 +1,320 @@
+<!-- saved from url=(0029)https://dreambooth.github.io/ -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>BLIP-Diffusion</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="content">
+      <h1>
+        <strong
+          >BLIP-Diffusion: Pre-trained Subject Representation 
+          for Controllable Text-to-Image Generation and Editing</strong
+        >
+      </h1>
+      <p id="authors">
+        <span><a href=""></a></span
+        >
+        <a href="https://scholar.google.com/citations?user=h5XtaUUAAAAJ&hl=en">Dongxu Li</a>
+        <a href="https://sites.google.com/site/junnanlics//">Junnan Li</a>
+        <a href="https://sites.google.com/view/stevenhoi/home">Steven C.H. Hoi</a>
+        <br />
+        <br />
+        <span style="font-size: 24px">Salesforce AI Research </span>
+      </p>
+      <br />
+      <img
+        src="./data/images-in-paper/teaser-website.png"
+        class="teaser-gif"
+        style="width: 100%"
+      /><br />
+      <h3 style="text-align: center">
+        <em
+          >Bringing multi-modal text-and-subject control to diffusion models</em
+        >
+      </h3>
+      <font size="+2">
+        <p style="text-align: center">
+          <a href="" target="_blank">[Paper]</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://github.com/salesforce/LAVIS/tree/main/projects/blip-diffusion" target="_blank">[Code]</a>
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp; (<font color="#C70039">new!</font>) -->
+          <!-- <a href="https://github.com/google/dreambooth" target="_blank" -->
+            <!-- >[Dataset]</a -->
+          <!-- > -->
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
+          <!-- <a
+            href="https://dreambooth.github.io/DreamBooth_files/bibtex.txt"
+            target="_blank"
+            >[BibTeX]</a -->
+          <!-- > -->
+        </p>
+      </font>
+    </div>
+    <div class="content">
+      <h2 style="text-align: center">Abstract</h2>
+      <p>
+        Subject-driven text-to-image generation models create novel renditions of an input subject based on text prompts. Existing models suffer from lengthy fine-tuning and difficulties preserving the subject fidelity. To overcome these limitations, we introduce BLIP-Diffusion, a new subject-driven image generation model that supports multimodal control which consumes inputs of subject images and text prompts. Unlike other subject-driven generation models, BLIP-Diffusion introduces a new multimodal encoder which is pre-trained to provide subject representation. We first pre-train the multimodal encoder following BLIP-2 to produce visual representation aligned with the text. Then we design a subject representation learning task, called prompted context generation, which enables a diffusion model to leverage such visual representation and generates new subject renditions. Compared with previous methods such as DreamBooth, our model enables zero-shot subject-driven generation, and efficient fine-tuning for customized subject with up to 20x speedup. We also demonstrate that BLIP-Diffusion can be flexibly combined with existing techniques such as ControlNet and prompt-to-prompt to enable novel subject-driven generation and editing applications.
+      </p>
+    </div>
+    <div class="content">
+      <h2 style="text-align: center">Demo I: Subject-driven Text-to-Image Generation</h2>
+      <p>
+        Large text-to-image models achieved a remarkable leap in the evolution
+        of AI......
+      </p>
+      <div class="select" style="margin-bottom: 10px">
+        <span style="font-size: 16px">Display Mode: </span>
+        <button class="mode_choose hardButton" disabled>Gallery</button>
+        <button class="mode_choose easyButton">High-Resolution</button>
+      </div>
+
+      <div class="box">
+        <div class="imageContainer"></div>
+        <div class="imageContainer"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="cat-hat-main">
+        <img
+          class="cat-hat-img"
+          id="bunny-img"
+          src="./slide_files/fluffy_bunny_68.png"
+        /><br />
+        <div class="cat-hat-text">
+          <!-- <span style="display: block; text-align: center"
+            >"My
+            <span id="fluffy" style="background-color: rgb(248, 128, 0)"
+              >fluffy</span
+            >
+            bunny doll." </span
+          ><br /> -->
+          <input
+            type="range"
+            min="16"
+            max="70"
+            value="42"
+            class="slider"
+            id="range_bunny"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="content">
+      <h2>Background</h2>
+      <p>
+        Given a particular subject such as clock (shown in the real images on
+        the left), it is very challenging to generate it in different contexts
+        with state-of-the-art text-to-image models, while maintaining high
+        fidelity to its key visual features. Even with dozens of iterations over
+        a text prompt that contains a detailed description of the appearance of
+        the clock (<em
+          >"retro style yellow alarm clock with a white clock face and a yellow
+          number three on the right part of the clock face in the jungle"</em
+        >), the Imagen model [Saharia et al., 2022] can't reconstruct its key
+        visual features (third column). Furthermore, even models whose text
+        embedding lies in a shared language-vision space and can create semantic
+        variations of the image, such as DALL-E2 [Ramesh et al., 2022], can
+        neither reconstruct the appearance of the given subject nor modify the
+        context (second column). In contrast, our approach (right) can
+        synthesize the clock with high fidelity and in new contexts (<em
+          >"a [V] clock in the jungle"</em
+        >).
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/background.png"
+        style="width: 100%"
+      />
+      <br />
+    </div>
+    <div class="content">
+      <h2>Approach</h2>
+      <p>
+        Our method takes as input a few images (typically 3-5 images suffice,
+        based on our experiments) of a subject (e.g., a specific dog) and the
+        corresponding class name (e.g. "dog"), and returns a
+        fine-tuned/"personalized'' text-to-image model that encodes a unique
+        identifier that refers to the subject. Then, at inference, we can
+        implant the unique identifier in different sentences to synthesize the
+        subjects in difference contexts.
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/high_level.png"
+        style="width: 100%"
+      />
+      <br />
+      <p>
+        Given ~3-5 images of a subject we fine tune a text-to-image diffusion in
+        two steps: (a) fine tuning the low-resolution text-to-image model with
+        the input images paired with a text prompt containing a unique
+        identifier and the name of the class the subject belongs to (e.g., "A
+        photo of a [T] dog”), in parallel, we apply a class-specific prior
+        preservation loss, which leverages the semantic prior that the model has
+        on the class and encourages it to generate diverse instances belong to
+        the subject's class by injecting the class name in the text prompt
+        (e.g., "A photo of a dog”). (b) fine-tuning the super resolution
+        components with pairs of low-resolution and high-resolution images taken
+        from our input images set, which enables us to maintain high-fidelity to
+        small details of the subject.
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/system.png"
+        style="width: 100%"
+      />
+      <br />
+    </div>
+    <div class="content">
+      <h2>Results</h2>
+      <p>
+        Results for re-contextualization of a bag and vase subject instances. By
+        finetuning a model using our method we are able to generate different
+        images of the a subject instance in different environments, with high
+        preservation of subject details and realistic interaction between the
+        scene and the subject. We display the conditioning prompts below each
+        image.
+      </p>
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/results.png"
+        style="width: 100%"
+      />
+    </div>
+    <div class="content">
+      <h2>Art Rendition</h2>
+      <p>
+        Original artistic renditions of our subject dog in the style of famous
+        painters. We remark that many of the generated poses were not seen in
+        the training set, such as the Van Gogh and Warhol rendition. We also
+        note that some renditions seem to have novel composition and faithfully
+        imitate the style of the painter - even suggesting some sort of
+        creativity (extrapolation given previous knowledge).
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/art.png"
+        style="width: 100%"
+      />
+      <br />
+    </div>
+    <div class="content">
+      <h2>Text-Guided View Synthesis</h2>
+      <p>
+        Our technique can synthesized images with specified viewpoints for a
+        subject cat (left to right: top, bottom, side and back views). Note that
+        the generated poses are different from the input poses, and the
+        background changes in a realistic manner given a pose change. We also
+        highlight the preservation of complex fur patterns on the subject cat's
+        forehead.
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/novel_views.png"
+        style="width: 100%"
+      />
+      <br />
+    </div>
+    <div class="content">
+      <h2>Property Modification</h2>
+      <p>
+        We show color modifications in the first row (using prompts ``a [color]
+        [V] car''), and crosses between a specific dog and different animals in
+        the second row (using prompts ``a cross of a [V] dog and a [target
+        species]''). We highlight the fact that our method preserves unique
+        visual features that give the subject its identity or essence, while
+        performing the required property modification.
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/property_modification.png"
+        style="width: 100%"
+      />
+      <br />
+    </div>
+    <div class="content">
+      <h2>Accessorization</h2>
+      <p>
+        Outfitting a dog with accessories. The identity of the subject is
+        preserved and many different outfits or accessories can be applied to
+        the dog given a prompt of type
+        <em>"a [V] dog wearing a police/chef/witch outfit''</em>. We observe a
+        realistic interaction between the subject dog and the outfits or
+        accessories, as well as a large variety of possible options.
+      </p>
+      <br />
+      <img
+        class="summary-img"
+        src="./DreamBooth_files/accessories.png"
+        style="width: 100%"
+      />
+      <br />
+    </div> -->
+    <!-- <div class="content">
+      <h2>Societal Impact</h2>
+      <p>
+        This project aims to provide users with an effective tool for
+        synthesizing personal subjects (animals, objects) in different contexts.
+        While general text-to-image models might be biased towards specific
+        attributes when synthesizing images from text, our approach enables the
+        user to get a better reconstruction of their desirable subjects. On
+        contrary, malicious parties might try to use such images to mislead
+        viewers. This is a common issue, existing in other generative models
+        approaches or content manipulation techniques. Future research in
+        generative modeling, and specifically of personalized generative priors,
+        must continue investigating and revalidating these concerns.
+      </p>
+      <br />
+    </div> -->
+    <div class="content">
+      <h2>Ethical and Responsible Use</h2>
+      <p>
+        Image generation models are susceptible to be used as tools for generating false content or prompting misinformation. 
+        Subject-driven generation could be misused as a tool for generating fake image of individuals. 
+        To mitigate this issue, our model has been trained on generic objects where person-related subjects have been purposely removed from the training data.
+        This makes the model weaker at generating fake images using person as subject control.
+      </p>
+      <p>
+        Our model is built using the pre-trained Stable Diffusion model trained on web-scraped datasets.
+        Therefore, our model inherits some shortcomings from Stable Diffusion,
+        such as generating biased contents with social stereotypes,
+        or other NSFW contents if used inappropriately. 
+        Our model's ability to precisely control the generation subject can help mitigate certain biases.
+        We can use NSFW detectors to block potential inappropriate content from being generated.
+        Nevertheless, we strongly caution against using our model directly in user-facing applications without a careful inspection of the model's output.
+        Proper content moderation and regulation are highly advised to prevent undesirable consequence.
+      </p>
+      <br />
+    </div>
+    <!-- <div class="content">
+      <h2>BibTex</h2>
+      <code>
+        @article{ruiz2022dreambooth,<br />
+        &nbsp;&nbsp;title={DreamBooth: Fine Tuning Text-to-image Diffusion
+        Models for Subject-Driven Generation},<br />
+        &nbsp;&nbsp;author={Ruiz, Nataniel and Li, Yuanzhen and Jampani, Varun
+        and Pritch, Yael and Rubinstein, Michael and Aberman, Kfir},<br />
+        &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2208.12242},<br />
+        &nbsp;&nbsp;year={2022}<br />
+        }
+      </code>
+    </div> -->
+    <div class="content" id="acknowledgements">
+      <p>
+        <strong>Acknowledgements</strong>: We thank colleagues at Salesforce AI Research for support and helpful discussion. We thank authors of <a href="https://github.com/CompVis/latent-diffusion">LDM</a>, <a href="https://dreambooth.github.io/">DreamBooth</a>, <a href="https://prompt-to-prompt.github.io/">Prompt-to-Prompt</a> for inspiration. Site template borrowed from DreamBooth and Prompt-to-Prompt.
+        <!-- Recycling a familiar <a href="https://chail.github.io/latent-composition/">template</a> ;). -->
+      </p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
