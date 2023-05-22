@@ -36,7 +36,8 @@
       /><br />
       <h3 style="text-align: center">
         <em
-          >Bringing multi-modal text-and-subject control to diffusion models.</em
+          >Bringing multi-modal text-and-subject control to diffusion
+          models.</em
         >
       </h3>
       <font size="+2">
@@ -145,7 +146,7 @@
       </h2>
       <div class="img-slider">
         <div class="cat-main">
-          <i><p style="margin: 10; text-align: center; font-size: 1.5rem">Subject Interpolation</p></i>
+          <i><p style="margin: 6px; margin-top: 15px; text-align: center; font-size: 1.5rem">Subject Interpolation</p></i>
           <img
             class="cat-img"
             id="interp-img1"
@@ -170,29 +171,46 @@
           </div>
         </div>
         <div class="cat-main">
-          <i><p style="margin: 10; text-align: center; font-size: 1.5rem">Subject Interpolation</p></i>
-          <img
-            class="cat-img"
-            style="margin-top: 10px"
-            id="interp-img2"
-            src="./data/x0y0.jpg"
-          />
-          <div class="slider-container">
-            <input
-              type="range"
-              min="0"
-              max="19"
-              value="5"
-              class="slider"
-              id="interp-range2"
-            />
-            <div class="img-container">
-              <img class="first-img" src="./data/x0y0.jpg" />
-              <img class="first-img" src="./data/x0y0.jpg" />
-              <img class="last-img" src="./data/x0y100.jpg" />
-              <img class="last-img" src="./data/x0y100.jpg" />
+          <p
+            style="
+              margin: 15.5px;
+              margin-left: 100px;
+              text-align: center;
+              font-size: 1.5rem;
+            "
+          >
+            <i>Subject-driven Style Transfer</i>
+          </p>
+          <div class="generater">
+            <div class="input-image">
+              <img class="left-img" src="./data/x0y0.jpg" />
+              <img class="left-img" src="./data/x0y0.jpg" />
+              <img class="left-img" src="./data/x0y0.jpg" />
+              <img class="left-img" src="./data/x0y0.jpg" />
+            </div>
+            <div class="output-image">
+              <img
+                style="width: 100%"
+                ;
+                class="cat-img"
+                style="margin-top: 5px"
+                id="interp-img2"
+                src="./data/x0y0.jpg"
+              />
+              <p style="margin: 11px; text-align: center">Guiding Subjects</p>
+              <div class="img-container" style="padding-top: 0px">
+                <img class="first-img" src="./data/x0y0.jpg" />
+                <img class="first-img" src="./data/x0y0.jpg" />
+                <img class="last-img" src="./data/x0y100.jpg" />
+                <img class="last-img" src="./data/x0y100.jpg" />
+                <!-- <p> -->
+                  <!-- fdas -->
+                <!-- </p> -->
+              </div>
             </div>
           </div>
+
+      
         </div>
       </div>
     </div>
@@ -226,16 +244,18 @@
       <br />
     </div> -->
     <div class="content">
-      <h2 style="text-align: center;">Approach</h2>
+      <h2 style="text-align: center">Approach</h2>
       <p>
+<<<<<<< HEAD
         Central to our approach is the novel concept of <strong>pre-trained subject representation</strong>. We first pre-train the multimodal encoder following BLIP-2 to produce visual representation aligned with the text. Then we design a subject representation learning task, called prompted context generation, which enables a diffusion model to leverage such visual representation and generates new subject renditions. Compared with previous methods such as DreamBooth, our model enables zero-shot subject-driven generation, and efficient fine-tuning for customized subject with up to 20x speedup. We also demonstrate that BLIP-Diffusion can be flexibly combined with existing techniques such as ControlNet and prompt-to-prompt to enable novel subject-driven generation and editing applications.
+=======
+        Central to our approach is the novel concept of
+        <strong></strong>pre-trained subject representation.
+>>>>>>> beb0e94966f70c56d361289dcf6069146d0ec2bd
       </p>
       <br />
-      <img
-        class="summary-img"/
-        src="./data/images-in-paper/arch.jpg"
-        style="width: 100%"
-      />
+      <img class="summary-img"/ src="./data/images-in-paper/arch.jpg"
+      style="width: 100%" />
       <br />
     </div>
     <!-- <div class="content">

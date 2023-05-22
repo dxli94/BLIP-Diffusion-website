@@ -221,13 +221,13 @@ p code {
 /* css for the slide */
 .img-slider {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   /* flex-direction: column; */
   /* justify-content: space-between; */
 }
 .cat-main {
-  width: 90%;
-  margin: -15px 30px 30px 30px;
+  /* width: 60%; */
+  margin: -15px 31.5px 15px 8px;
   /*height: 100%;*/
   /* display: flex;
   flex-direction: column; */
@@ -301,6 +301,18 @@ p code {
   margin-top: 10px;
 }
 .first-img,
-.last-img {
+.last-img,
+.left-img {
   width: 100px;
+  padding: 0px 1px;
+}
+.left-img {
+  padding: 1px 15px;
+  /* padding-top: 5px; */
+  /* margin-bottom: 10px; */
+}
+.generater {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
