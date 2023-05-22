@@ -153,9 +153,9 @@ p code {
   width: 40px;
 }
 
-img {
+/* img {
   width: 200px;
-}
+} */
 
 /* .mode_choose {
   width: 80px;
@@ -198,9 +198,15 @@ img {
 }
 
 .imageContainer {
-  /* display: flex; */
+  display: flex;
   perspective: 1000px;
   text-align: center;
+}
+.picContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5px;
 }
 .images {
   transition: transform 0.8s;
@@ -213,9 +219,16 @@ img {
 }
 
 /* css for the slide */
-.cat-hat-main {
-  /*height: 100%;*/
+.img-slider {
   display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+.cat-main {
+  width: 50%;
+  /*height: 100%;*/
+  /* display: flex;
+  flex-direction: column; */
   align-items: center;
   /*justify-content: center;*/
   margin-left: auto;
@@ -224,32 +237,36 @@ img {
   margin-bottom: auto;
 }
 
-.cat-hat-img {
+.cat-img {
   /*vertical-align: middle;*/
   /*vertical-align: middle;*/
-  width: 40%;
+  width: 90%;
   /*flex-basis: 40%*/
   margin-left: auto;
   margin-right: auto;
 }
 
-.cat-hat-text {
-  float: right;
+.slider-container {
+  /* float: right;
   font-size: 20px;
   width: 40%;
   margin-left: 5%;
-  margin-right: auto;
+  margin-right: auto; */
+  /* display: flex;
+  flex-direction: column; */
+  width: 225%;
 }
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 40%;
   height: 25px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  margin-top: 10px;
 }
 
 .slider:hover {
@@ -270,4 +287,14 @@ img {
   height: 25px;
   background: #04aa6d;
   cursor: pointer;
+}
+.img-container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 10px;
+}
+.first-img,
+.last-img {
+  width: 100px;
 }

@@ -6,6 +6,12 @@
     "data/images-in-paper/demo1/backpack-dog/03.jpg",
     "data/images-in-paper/demo1/backpack-dog/on-the-beach2.jpg"
   ],
+  "d1_captions_e1": [
+    "A backpack in the snow.", 
+    "A backpack on a cobblestone street.",
+    "A backpack in a forest.",
+    "A backpack on the beach."
+  ],
   "d1_images_h1": [
     "data/images-in-paper/demo1/backpack-dog/in-the-snow3.jpg",
     "data/images-in-paper/demo1/backpack-dog/on-a-cobblestone-street3.jpg",
@@ -22,6 +28,12 @@
     "data/images-in-paper/demo1/teapot/with-a-tree-and-autumn-leaves-in-the-background0.jpg",
     "data/images-in-paper/demo1/teapot/with-a-wheat-field-in-the-background3.jpg"
   ],
+  "d1_captions_e2": [
+    "A teapot in the jungle.",
+    "A teapot on a table.",
+    "A teapot with a tree and autumn leaves in the background.",
+    "A teapot with a wheat field in the background."
+  ],
   "d1_images_h2": [
     "data/images-in-paper/demo1/teapot/in-the-jungle1.jpg",
     "data/images-in-paper/demo1/teapot/floating-on-top-of-water1.jpg",
@@ -37,6 +49,12 @@
     "data/images-in-paper/demo1/dog/wearing-a-santa-hat1.jpg",
     "data/images-in-paper/demo1/dog/in-the-snow2.jpg",
     "data/images-in-paper/demo1/dog/04.jpg"
+  ],
+  "d1_captions_e3": [
+    "A cube-shaped dog.",
+    "A dog wearing a Santa hat.",
+    "A dog in the snow.",
+    "A dog on the sidewalk of a street."
   ],
   "d1_images_h3": [
     "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
@@ -67,5 +85,16 @@
     "data/images-in-paper/demo1/pink-glasses/01.jpg",
     "data/images-in-paper/demo1/pink-glasses/on-top-of-pink-fabric1.jpg",
     "data/images-in-paper/demo1/pink-glasses/on-top-of-a-mirror3.jpg"
+  ],
+  "hard_captions1": [1, 2, 3, 4, 5, 5, 6, 5],
+  "hard_captions2": [
+    "on the snow",
+    "in the forest",
+    "ok",
+    4,
+    5,
+    3,
+    "in the ocean",
+    "the bear is so cute lying on the grass"
   ]
 }

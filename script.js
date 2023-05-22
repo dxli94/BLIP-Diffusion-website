@@ -17,24 +17,60 @@ fetch("data.json")
     const d1_images_h4 = jsonData.d1_images_h4
     const d1_images_h5 = jsonData.d1_images_h5
 
-    function renderHard(imageContainer, data) {
+    function renderHard(imageContainer, data, caption) {
       imageContainer.innerHTML = ""
       for (let i = 0; i < data.length; i++) {
+        const picContainer = document.createElement("div")
+        picContainer.classList.add("picContainer")
+
         const img = document.createElement("img")
+        const imgText = document.createElement("div")
+        imgText.textContent = caption[i]
+        imgText.style.textAlign = "center"
+        // add a slight margin below the image
+        imgText.style.marginBottom = "10px"
+        // make font size larger
+        imgText.style.fontSize = "15px"
+
         img.src = data[i]
         img.style.width = "120px"
-        imageContainer.appendChild(img)
+        picContainer.appendChild(img)
+        picContainer.appendChild(imgText)
         img.classList.add("images")
+        imageContainer.appendChild(picContainer)
       }
     }
-    function renderEasy(imageContainer, data) {
+    function renderEasy(imageContainer, data, caption) {
+      // imageContainer.innerHTML = ""
+      // for (let i = 0; i < data.length; i++) {
+      //   const img = document.createElement("img")
+      //   img.src = data[i]
+      //   img.style.width = "320px"
+      //   imageContainer.appendChild(img)
+      //   img.classList.add("images")
+      // }
       imageContainer.innerHTML = ""
       for (let i = 0; i < data.length; i++) {
+        const picContainer = document.createElement("div")
+        picContainer.classList.add("picContainer")
+
         const img = document.createElement("img")
+        const imgText = document.createElement("div")
+        imgText.textContent = caption[i]
+        imgText.style.textAlign = "center"
+        // add a 10px margin below the image
+        imgText.style.marginBottom = "10px"
+        // make font size larger
+        imgText.style.fontSize = "20px"
+
         img.src = data[i]
         img.style.width = "245px"
-        imageContainer.appendChild(img)
+        // imageContainer.appendChild(img)
+        picContainer.appendChild(img)
+        picContainer.appendChild(imgText)
+
         img.classList.add("images")
+        imageContainer.appendChild(picContainer)
       }
     }
 
@@ -46,11 +82,14 @@ fetch("data.json")
 
     // Function to add the additional picture
     function addAdditionalPicture() {
-      renderHard(imageContainer[0], d1_images_h1)
-      renderHard(imageContainer[1], d1_images_h2)
-      renderHard(imageContainer[2], d1_images_h3)
-      renderHard(imageContainer[3], d1_images_h4)
-      renderHard(imageContainer[4], d1_images_h5)
+      renderHard(imageContainer[0], d1_images_h1, jsonData.hard_captions1)
+      renderHard(imageContainer[1], d1_images_h2, jsonData.hard_captions2)
+      renderHard(imageContainer[2], d1_images_h3, jsonData.hard_captions2)
+      renderHard(imageContainer[3], d1_images_h4, jsonData.hard_captions2)
+      renderHard(imageContainer[4], d1_images_h5, jsonData.hard_captions2)
+
+      // renderHard(imageContainer[0], hard_images, jsonData.hard_captions1)
+      // renderHard(imageContainer[1], test_hard, jsonData.hard_captions2)
 
       flipImg()
 
@@ -59,12 +98,14 @@ fetch("data.json")
       easyButton.disabled = false
     }
     function getInitialPicture() {
-      renderEasy(imageContainer[0], d1_images_e1)
-      renderEasy(imageContainer[1], d1_images_e2)
-      renderEasy(imageContainer[2], d1_images_e3)
+      renderEasy(imageContainer[0], d1_images_e1, jsonData.d1_captions_e1)
+      renderEasy(imageContainer[1], d1_images_e2, jsonData.d1_captions_e2)
+      renderEasy(imageContainer[2], d1_images_e3, jsonData.d1_captions_e3)
       // clear the last image
       imageContainer[3].innerHTML = ""
       imageContainer[4].innerHTML = ""
+      // renderEasy(imageContainer[0], easy_images, jsonData.easy_captions1)
+      // renderEasy(imageContainer[1], test_easy, jsonData.easy_captions2)
 
       flipImg()
 
@@ -118,3 +159,49 @@ fetch("data.json")
   .catch((error) => {
     console.error("Error fetching JSON:", error)
   })
+
+const interp_images1 = [
+  "./data/x0y0.jpg",
+  "./data/x0y25.jpg",
+  "./data/x0y50.jpg",
+  "./data/x0y75.jpg",
+  "./data/x0y100.jpg",
+  // Add the paths of the remaining 16 images here
+  // "./data/x0y20.jpg",
+  // "./data/x0y25.jpg",
+  // ...
+  // "./data/x0y95.jpg",
+  // "./data/x0y100.jpg"
+]
+const interp_images2 = [
+  "./data/x0y100.jpg",
+  "./data/x0y75.jpg",
+  "./data/x0y0.jpg",
+  "./data/x0y25.jpg",
+  "./data/x0y50.jpg",
+
+  // Add the paths of the remaining 16 images here
+  // "./data/x0y20.jpg",
+  // "./data/x0y25.jpg",
+  // ...
+  // "./data/x0y95.jpg",
+  // "./data/x0y100.jpg"
+]
+const image1 = document.getElementById("interp-img1")
+const slider1 = document.getElementById("interp-range1")
+const image2 = document.getElementById("interp-img2")
+const slider2 = document.getElementById("interp-range2")
+
+// Function to change the image source based on the slider value
+function changeImage(slider, image, images) {
+  let index = parseInt(slider.value)
+  image.src = images[index]
+}
+
+// Event listener for the slider input
+slider1.addEventListener("input", () =>
+  changeImage(slider1, image1, interp_images1)
+)
+slider2.addEventListener("input", () =>
+  changeImage(slider2, image2, interp_images2)
+)
