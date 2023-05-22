@@ -136,10 +136,9 @@
     "glasses on top of a mirror."
   ],
   "originalImage": [
-    "data/images-in-paper/demo1/backpack-dog/03.jpg",
-    "data/images-in-paper/demo1/teapot/01.jpg",
-    "data/images-in-paper/demo1/dog/04.jpg",
-    "data/images-in-paper/demo1/clock/05.jpg",
-    "data/images-in-paper/demo1/pink-glasses/01.jpg"
+    "01.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg"
   ]
 }

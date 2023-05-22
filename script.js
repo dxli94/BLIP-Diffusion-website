@@ -133,12 +133,8 @@ fetch("data.json")
           // Flip to a different image
           this.dataset.originalSrc = this.src // Store the original image source
           console.log(this.dataset.originalSrc)
-          
-          let src_parts = this.dataset.originalSrc.split("/")
-          // remove first three elements
-          src_parts.splice(0, 3)
 
-          if (originalImage.has(src_parts.join("/"))) {
+          if (originalImage.has(this.dataset.originalSrc.split("/").pop())) {
             this.src = "./data/true_mark.jpeg"
           } else {
             this.src = "./data/false.png"
