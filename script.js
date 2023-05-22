@@ -191,17 +191,17 @@ const interp_images1 = [
 // "./data/x0y95.jpg",
 // "./data/x0y100.jpg"
 // ]
-const interp_images2 = [
-  "./data/x0y100.jpg",
-  "./data/x0y75.jpg",
-  "./data/x0y0.jpg",
-  "./data/x0y25.jpg",
-  "./data/x0y50.jpg",
-]
+// const interp_images2 = [
+//   "./data/x0y100.jpg",
+//   "./data/x0y75.jpg",
+//   "./data/x0y0.jpg",
+//   "./data/x0y25.jpg",
+//   "./data/x0y50.jpg",
+// ]
 const image1 = document.getElementById("interp-img1")
 const slider1 = document.getElementById("interp-range1")
-const image2 = document.getElementById("interp-img2")
-const slider2 = document.getElementById("interp-range2")
+// const image2 = document.getElementById("interp-img2")
+// const slider2 = document.getElementById("interp-range2")
 
 // Function to change the image source based on the slider value
 function changeImage(slider, image, images) {
@@ -213,6 +213,8 @@ function changeImage(slider, image, images) {
 slider1.addEventListener("input", () =>
   changeImage(slider1, image1, interp_images1)
 )
-slider2.addEventListener("input", () =>
-  changeImage(slider2, image2, interp_images2)
-)
+// slider2.addEventListener("input", () =>
+//   changeImage(slider2, image2, interp_images2)
+// )
+
+// picture combination

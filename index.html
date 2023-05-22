@@ -36,7 +36,8 @@
       /><br />
       <h3 style="text-align: center">
         <em
-          >Bringing multi-modal text-and-subject control to diffusion models.</em
+          >Bringing multi-modal text-and-subject control to diffusion
+          models.</em
         >
       </h3>
       <font size="+2">
@@ -152,28 +153,51 @@
           </div>
         </div>
         <div class="cat-main">
-          <p style="margin: 0; text-align: center; font-size: 1.5rem">title</p>
-          <img
-            class="cat-img"
-            style="margin-top: 5px"
-            id="interp-img2"
-            src="./data/x0y0.jpg"
-          />
+          <p
+            style="
+              margin: 2.5px;
+              margin-left: 100px;
+              text-align: center;
+              font-size: 1.5rem;
+            "
+          >
+            title
+          </p>
+          <div class="generater">
+            <div class="input-image">
+              <img class="left-img" src="./data/x0y0.jpg" />
+              <img class="left-img" src="./data/x0y0.jpg" />
+              <img class="left-img" src="./data/x0y0.jpg" />
+              <img class="left-img" src="./data/x0y0.jpg" />
+            </div>
+            <div class="output-image">
+              <img
+                style="width: 100%"
+                ;
+                class="cat-img"
+                style="margin-top: 5px"
+                id="interp-img2"
+                src="./data/x0y0.jpg"
+              />
+              <p style="margin: 11px; text-align: center">select</p>
+              <div class="img-container" style="padding-top: 0px">
+                <img class="first-img" src="./data/x0y0.jpg" />
+                <img class="first-img" src="./data/x0y0.jpg" />
+                <img class="last-img" src="./data/x0y100.jpg" />
+                <img class="last-img" src="./data/x0y100.jpg" />
+              </div>
+            </div>
+          </div>
+
           <div class="slider-container">
-            <input
+            <!-- <input
               type="range"
               min="0"
               max="19"
               value="5"
               class="slider"
               id="interp-range2"
-            />
-            <div class="img-container">
-              <img class="first-img" src="./data/x0y0.jpg" />
-              <img class="first-img" src="./data/x0y0.jpg" />
-              <img class="last-img" src="./data/x0y100.jpg" />
-              <img class="last-img" src="./data/x0y100.jpg" />
-            </div>
+            /> -->
           </div>
         </div>
       </div>
@@ -208,16 +232,14 @@
       <br />
     </div> -->
     <div class="content">
-      <h2 style="text-align: center;">Approach</h2>
+      <h2 style="text-align: center">Approach</h2>
       <p>
-        Central to our approach is the novel concept of <strong></strong>pre-trained subject representation.
+        Central to our approach is the novel concept of
+        <strong></strong>pre-trained subject representation.
       </p>
       <br />
-      <img
-        class="summary-img"/
-        src="./data/images-in-paper/arch.jpg"
-        style="width: 100%"
-      />
+      <img class="summary-img"/ src="./data/images-in-paper/arch.jpg"
+      style="width: 100%" />
       <br />
       <p>
         Given ~3-5 images of a subject we fine tune a text-to-image diffusion in
