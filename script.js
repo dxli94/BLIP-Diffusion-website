@@ -218,3 +218,87 @@ slider1.addEventListener("input", () =>
 // )
 
 // picture combination
+// Get the images and the output image element
+const imagePairs = {
+  "1,A": "./data/result1.jpg",
+  "1,B": "./data/result2.jpg",
+  "1,C": "./data/result3.jpg",
+  "1,D": "./data/result4.jpg",
+  "2,A": "./data/result5.jpg",
+  "2,B": "./data/result6.jpg",
+  "2,C": "./data/result7.jpg",
+  "2,D": "./data/result8.jpg",
+  "3,A": "./data/result9.jpg",
+  "3,B": "./data/result10.jpg",
+  "3,C": "./data/result11.jpg",
+  "3,D": "./data/result12.jpg",
+  "4,A": "./data/result13.jpg",
+  "4,B": "./data/result14.jpg",
+  "4,C": "./data/result15.jpg",
+  "4,D": "./data/result16.jpg",
+}
+
+// Get the images and the output image element
+const inputImages = document.querySelectorAll(".input-image img")
+const outputImage = document.querySelector(".cat-img")
+const imgContainerImages = document.querySelectorAll(".img-container img")
+
+// Variables to store the clicked images
+let selectedInputImage = null
+let selectedImgContainerImage = null
+
+// Function to check if both images are selected
+const checkSelection = () => {
+  if (selectedInputImage && selectedImgContainerImage) {
+    // Get the pair key
+    const pairKey = `${selectedInputImage.dataset.value},${selectedImgContainerImage.dataset.value}`
+    // Get the corresponding source from the mapping
+    const newSrc = imagePairs[pairKey]
+    if (newSrc) {
+      // Update the output image's source with the new source
+      outputImage.src = newSrc
+    }
+  }
+}
+
+// Add click event listeners to input images
+inputImages.forEach((image) => {
+  image.addEventListener("click", () => {
+    // Remove the class from previously clicked input image, if any
+    if (selectedInputImage) {
+      selectedInputImage.classList.remove("clicked-image")
+    }
+
+    // Apply the class to the clicked input image
+    image.classList.add("clicked-image")
+    selectedInputImage = image
+    checkSelection()
+  })
+
+  // Check if the current image is the default clicked image
+  if (image.src.includes("1.jpg")) {
+    image.classList.add("clicked-image")
+    selectedInputImage = image
+  }
+})
+
+// Add click event listeners to img container images
+imgContainerImages.forEach((image) => {
+  image.addEventListener("click", () => {
+    // Remove the class from previously clicked img container image, if any
+    if (selectedImgContainerImage) {
+      selectedImgContainerImage.classList.remove("clicked-image")
+    }
+
+    // Apply the class to the clicked img container image
+    image.classList.add("clicked-image")
+    selectedImgContainerImage = image
+    checkSelection()
+  })
+
+  // Check if the current image is the default clicked image
+  if (image.src.includes("A.jpg")) {
+    image.classList.add("clicked-image")
+    selectedImgContainerImage = image
+  }
+})
