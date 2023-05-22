@@ -212,7 +212,13 @@ img {
 }
 
 /* css for the slide */
+.img-slider {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
 .cat-main {
+  width: 50%;
   /*height: 100%;*/
   /* display: flex;
   flex-direction: column; */
@@ -227,18 +233,21 @@ img {
 .cat-img {
   /*vertical-align: middle;*/
   /*vertical-align: middle;*/
-  width: 40%;
+  width: 90%;
   /*flex-basis: 40%*/
   margin-left: auto;
   margin-right: auto;
 }
 
 .slider-container {
-  float: right;
+  /* float: right;
   font-size: 20px;
   width: 40%;
   margin-left: 5%;
-  margin-right: auto;
+  margin-right: auto; */
+  /* display: flex;
+  flex-direction: column; */
+  width: 225%;
 }
 
 .slider {
@@ -271,4 +280,14 @@ img {
   height: 25px;
   background: #04aa6d;
   cursor: pointer;
+}
+.img-container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 10px;
+}
+.first-img,
+.last-img {
+  width: 100px;
 }
