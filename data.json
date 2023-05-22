@@ -44,24 +44,24 @@
     "A teapot with a wheat field in the background."
   ],
   "d1_images_h2": [
-    "data/images-in-paper/demo1/teapot/in-the-jungle1.jpg",
-    "data/images-in-paper/demo1/teapot/floating-on-top-of-water1.jpg",
-    "data/images-in-paper/demo1/teapot/on-top-of-a-mirror1.jpg",
-    "data/images-in-paper/demo1/teapot/on-top-of-pink-fabric2.jpg",
-    "data/images-in-paper/demo1/teapot/01.jpg",
-    "data/images-in-paper/demo1/teapot/with-a-tree-and-autumn-leaves-in-the-background0.jpg",
-    "data/images-in-paper/demo1/teapot/with-a-wheat-field-in-the-background3.jpg",
-    "data/images-in-paper/demo1/teapot/with-the-Eiffel-Tower-in-the-background3.jpg"
+    "data/images-in-paper/demo1/bear-plushie/on-top-of-green-grass-with-sunflowers-around-it3.jpg",
+    "data/images-in-paper/demo1/bear-plushie/on-top-of-a-mirror3.jpg",
+    "data/images-in-paper/demo1/bear-plushie/in-the-jungle2.jpg",
+    "data/images-in-paper/demo1/bear-plushie/coloured-red0.jpg",
+    "data/images-in-paper/demo1/bear-plushie/with-a-mountain-in-the-background2.jpg",
+    "data/images-in-paper/demo1/bear-plushie/01.jpg",
+    "data/images-in-paper/demo1/bear-plushie/with-a-tree-and-autumn-leaves-in-the-background3.jpg",
+    "data/images-in-paper/demo1/bear-plushie/with-the-Eiffel-Tower-in-the-background2.jpg"
   ],
   "d1_captions_h2": [
-    "A teapot in the jungle.",
-    "A teapot floating on top of water.",
-    "A teapot on top of a mirror.",
-    "A teapot on top of pink fabric.",
-    "A teapot on a table.",
-    "A teapot with a tree and autumn leaves in the background.",
-    "A teapot with a wheat field in the background.",
-    "A teapot with the Eiffel Tower in the background."
+    "A plushie on top of green grass with sunflowers around it.",
+    "A plushie on top of a mirror.",
+    "A plushie in the jungle.",
+    "A red plushie.",
+    "A plushie with a mountain in the background.",
+    "A plushie near a river.",
+    "A plushie with a tree and autumn leaves in the background.",
+    "A plushie with the Eiffel Tower in the background."
   ],
   "d1_images_e3": [
     "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
@@ -136,10 +136,9 @@
     "glasses on top of a mirror."
   ],
   "originalImage": [
-    "data/images-in-paper/demo1/backpack-dog/03.jpg",
-    "data/images-in-paper/demo1/teapot/01.jpg",
-    "data/images-in-paper/demo1/dog/04.jpg",
-    "data/images-in-paper/demo1/clock/05.jpg",
-    "data/images-in-paper/demo1/pink-glasses/01.jpg"
+    "01.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg"
   ]
 }
