@@ -344,6 +344,9 @@ const fileDictionary = {
     "data/images-in-paper/demo2/stylized-subjects/hf-yarn.png",
 }
 
+const stylizedFileList = Object.values(fileDictionary);
+preloadImages(stylizedFileList);
+
 const inputImages = document.querySelectorAll(".input-image img")
 
 const imgContainerImages = document.querySelectorAll(".guiding-subjuects img")
