@@ -140,7 +140,7 @@
         Not challenging enough? Click "Challenge" for more!
       </p>
       <div class="select" style="margin-bottom: 10px">
-        <span style="font-size: 16px">Display Mode: </span>
+        <!-- <span style="font-size: 16px">Display Mode: </span> -->
         <button class="mode_choose easyButton" disabled>High-Resolution</button>
         <button class="mode_choose hardButton">Challenge</button>
       </div>
@@ -155,7 +155,13 @@
     </div>
     <div class="content">
       <h2 style="text-align: center">
-        Demo II: Zero-shot Subject-driven Image Manipulation
+        Demo II: Subject-driven Image Editing
+      </h2>
+      <p>Editing results...</p>
+    </div>
+    <div class="content">
+      <h2 style="text-align: center">
+        Demo III: Zero-shot Subject-driven Image Manipulation
       </h2>
       <div class="img-slider">
         <div class="cat-main">
@@ -168,13 +174,13 @@
                 font-size: 1.5rem;
               "
             >
-              Subject Interpolation
+              Subject Interpolation (Drag the Slider!)
             </p></i
           >
           <img
             class="cat-img"
             id="interp-img1"
-            src="./data/interpolation/0_x0y0.jpg"
+            src="./data/interpolation/31_x100y24.jpg"
             style="margin-top: 10px"
           />
           <div class="slider-container">
@@ -182,7 +188,7 @@
               type="range"
               min="0"
               max="75"
-              value="0"
+              value="31"
               class="slider"
               id="interp-range1"
             />
@@ -304,14 +310,46 @@
     </div> -->
     <div class="content">
       <h2 style="text-align: center">Approach</h2>
+      <i><h3>Two-stage Pre-training</h3></i>
       <p>
-        Central to our approach is the novel concept of
-        <strong></strong>pre-trained subject representation.
+        Central to our approach is
+        the novel concept of <strong>pre-trained subject
+        representation</strong>. Such representation aligns with text embeddings and in the meantime also encodes the subject appearance.
+        This allows efficient fine-tuning of the model for high-fidelity subject-driven applications, such as text-to-image generation, editing and style transfer.
+      </p>
+      <p>
+        To this end, we design a two-stage pre-training strategy to learn generic subject representation.
+        In the first pre-training stage, we perform multimodal representation learning, which enforces BLIP-2 to produce text-aligned visual features based on
+        the input image. In the second pre-training stage, we design a subject representation learning task, called prompted context generation, where the diffusion model
+        learns to generate novel subject renditions based on the input visual features.
+      </p>
+      <p>
+        To achieve this, we curate pairs of input-target images with the same subject appearing
+        in different contexts. Specifically, we synthesize input images by composing the subject with a
+        random background. During pre-training, we feed the synthetic input image and the subject class
+        label through BLIP-2 to obtain the multimodal embeddings as subject representation. The subject
+        representation is then combined with a text prompt to guide the generation of the target image.
       </p>
       <br />
       <img class="summary-img"/ src="./data/images-in-paper/arch.jpg"
       style="width: 100%" />
       <br />
+      <i><h3>Controllable Generation and Editing</h3></i>
+      <p>
+        Our model introduces a multimodal conditioning mechanism for subject-control. In the meanwhile, the architecture is also compatible to integrate
+        with established techniques built on top of the diffusion model, such as ControlNet and prompt-to-prompt for controllable generation and editing.
+      </p>
+      <img class="summary-img"/ src="./data/images-in-paper/inference.jpg"
+      <br />
+      <p>
+        For ControlNet, we attach the U-Net of the pre-trained ControlNet to
+        that of BLIP-Diffusion via residuals. In this way, the model takes into account the input structure condition, such as edge maps and depth maps, in addition to the subject cues.
+        Since our model inherits the architecture of the original latent diffusion model, we observe satisfying generations using off-the-shelf integration with pre-trained ControlNet without further training
+      </p>
+      <p>
+        For subject-driven image editing, we extract automatically an editing region to edit using attention maps. We mix the denoising latents at each step based on the extracted editing mask. Namely, latents of the unedited regions are from the original generation whereas latents of the edited regions are from the subject-driven generation. In this way, we obtain
+        the edited image with subject-specific visuals while also preserving the unedited regions.
+      </p>
     </div>
     <!-- <div class="content">
       <h2>Results</h2>
