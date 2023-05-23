@@ -154,22 +154,6 @@ p code {
   width: 40px;
 }
 
-/* img {
-  width: 200px;
-} */
-
-/* .mode_choose {
-  width: 80px;
-  background: linear-gradient(#4c7aaf, #2e407d);
-  color: white;
-  padding: 6px 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  margin: 3px;
-} */
-
 .mode_choose {
   align-items: center;
   padding: 6px 14px;
@@ -222,45 +206,16 @@ p code {
 /* css for the slide */
 .img-slider {
   display: flex;
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
 }
 .cat-main {
-  /* width: 60%; */
   margin: -15px 31.5px 15px 2px;
-  /*height: 100%;*/
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: center;
-  justify-content: center; */
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto; */
-  /* margin: 0; */
-  /* margin: 10px; */
 }
 
 .cat-img {
-  /*vertical-align: middle;*/
-  /*vertical-align: middle;*/
   width: 100%;
-  /* margin: 10px; */
-  /*flex-basis: 40%*/
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* margin-right: 10px; */
 }
 
 .slider-container {
-  /* float: right;
-  font-size: 20px;
-  width: 40%;
-  margin-left: 5%;
-  margin-right: auto; */
-  /* display: flex;
-  flex-direction: column; */
   width: 249%;
 }
 
@@ -285,7 +240,6 @@ p code {
   appearance: none;
   width: 25px;
   height: 25px;
-  /* background: #04aa6d; */
   background: rgb(0, 162, 255);
   cursor: pointer;
 }
@@ -311,8 +265,6 @@ p code {
 }
 .left-img {
   margin: 1px 15px;
-  /* padding-top: 5px; */
-  /* margin-bottom: 10px; */
 }
 .generater {
   display: flex;
@@ -321,5 +273,28 @@ p code {
 }
 /* cilcked effect */
 .clicked-image {
-  border: 4px solid rgb(0, 162, 255); /* Example border style */
+  border: 4px solid rgb(0, 162, 255);
+}
+
+/* demo Subject-driven Image Editing */
+.demo2 {
+  display: flex;
+  justify-content: space-between;
+}
+.org-image img {
+  width: 408px;
+}
+.edited-img {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+  max-height: 300px;
+  margin-left: 10px;
+}
+.edited-img img {
+  width: calc(25% - 10px);
+  height: auto;
+  margin: 0 5px;
 }
