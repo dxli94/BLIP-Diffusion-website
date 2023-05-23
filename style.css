@@ -263,8 +263,13 @@ p code {
   width: 100px;
   padding: 0px 1px;
 }
+.last-img {
+  cursor: pointer;
+}
+
 .left-img {
   margin: 1px 15px;
+  cursor: pointer;
 }
 .generater {
   display: flex;
@@ -297,4 +302,6 @@ p code {
   width: calc(25% - 10px);
   height: auto;
   margin: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
 }

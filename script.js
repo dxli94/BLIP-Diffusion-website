@@ -255,6 +255,12 @@ editingImages.forEach((image) => {
     const imagePath = image.src
     const updatedPath = imagePath.replace(".jpg", "-edited.png")
     orgImage.src = updatedPath
+
+    // Remove "clicked-image" class from all images
+    editingImages.forEach((img) => img.classList.remove("clicked-image"))
+
+    // Add "clicked-image" class to the clicked image
+    image.classList.add("clicked-image")
   })
 })
 // picture combination
