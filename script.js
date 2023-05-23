@@ -248,7 +248,7 @@ function changeImage(slider, image, images) {
 //   changeImage(slider1, image1, interp_images1)
 // )
 
-function preloadImages(images) {
+async function preloadImages(images) {
   let loadedImages = [];
   let promises = [];
 
@@ -265,7 +265,8 @@ function preloadImages(images) {
     promises.push(promise);
   }
 
-  return Promise.all(promises).then(() => loadedImages);
+  await Promise.all(promises)
+  return loadedImages
 }
 
 // Usage:
