@@ -4,10 +4,7 @@ fetch("data.json")
   .then((response) => response.json())
   .then((jsonData) => {
     const originalImage = new Set(jsonData.originalImage)
-    // const easy_images = jsonData.easy_images
-    // const hard_images = jsonData.hard_images
-    // const test_easy = jsonData.test_easy
-    // const test_hard = jsonData.test_hard
+
     const d1_images_e1 = jsonData.d1_images_e1
     const d1_images_h1 = jsonData.d1_images_h1
     const d1_images_e2 = jsonData.d1_images_e2
@@ -286,28 +283,6 @@ inputImages.forEach((images) => {
     // Add "clicked-image" class to the clicked image
     images.classList.add("clicked-image")
     generateNew()
-    // let clickedImage = document.querySelectorAll(".clicked-image")
-    // let imagePath = ""
-
-    // for (let i = 0; i < clickedImage.length; i++) {
-    //   let src = clickedImage[i].getAttribute("src")
-    //   if (i !== 0) {
-    //     imagePath += ","
-    //   }
-    //   imagePath += src
-    // }
-
-    // console.log(imagePath)
-    // if (
-    //   JSON.stringify(imagePaths) ===
-    //   JSON.stringify([
-    //     "./data/images-in-paper/demo2/ref-subjects/bunny.jpg",
-    //     "./data/images-in-paper/demo2/condition/fire.jpg",
-    //   ])
-    // ) {
-    //   outputImage.src =
-    //     "data/images-in-paper/demo2/stylized-subjects/sculpture-fire.png"
-    // }
   })
 })
 imgContainerImages.forEach((images) => {
@@ -318,17 +293,6 @@ imgContainerImages.forEach((images) => {
     // Add "selected" class to the clicked image
     images.classList.add("clicked-image")
     generateNew()
-    // let clickedImage = document.querySelectorAll(".clicked-image")
-    // let imagePath = ""
-
-    // for (let i = 0; i < clickedImage.length; i++) {
-    //   let src = clickedImage[i].getAttribute("src")
-    //   if (i !== 0) {
-    //     imagePath += ","
-    //   }
-    //   imagePath += src
-    // }
-    // outputImage.src = fileDictionary[imagePath]
   })
 })
 
@@ -344,11 +308,6 @@ function generateNew() {
     imagePath += src
   }
   outputImage.src = fileDictionary[imagePath]
-  // outputImage.src = "./data/images-in-paper/demo2/condition/fire.jpg"
-  // outputImage.src =
-  // "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png"
-
-  // console.log(fileDictionary[imagePath])
 }
 
 const fileDictionary = {
