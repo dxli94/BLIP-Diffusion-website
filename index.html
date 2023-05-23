@@ -174,14 +174,14 @@
           <img
             class="cat-img"
             id="interp-img1"
-            src="./data/x0y0.jpg"
+            src="./data/interpolation/0_x0y0.jpg"
             style="margin-top: 10px"
           />
           <div class="slider-container">
             <input
               type="range"
               min="0"
-              max="12"
+              max="75"
               value="0"
               class="slider"
               id="interp-range1"
@@ -192,16 +192,16 @@
                 src="./data/images-in-paper/demo2/dog7.jpg"
               />
               <img
+                class="last-img"
+                src="./data/images-in-paper/demo2/dog3.jpg"
+              />
+              <img
                 class="first-img"
                 src="./data/images-in-paper/demo2/cat2.jpg"
               />
               <img
                 class="last-img"
                 src="./data/images-in-paper/demo2/cat.jpg"
-              />
-              <img
-                class="last-img"
-                src="./data/images-in-paper/demo2/dog3.jpg"
               />
             </div>
           </div>
@@ -243,11 +243,14 @@
                 ;
                 class="cat-img"
                 style="margin-top: 5px"
-                id="interp-img2"
-                src="./data/x0y0.jpg"
+                id="generate-img"
+                src="data/images-in-paper/demo2/stylized-subjects/sculpture-fire.png"
               />
               <p style="margin: 11px; text-align: center">Guiding Subjects</p>
-              <div class="img-container" style="padding-top: 0px">
+              <div
+                class="img-container guiding-subjuects"
+                style="padding-top: 0px"
+              >
                 <img
                   class="first-img clicked-image"
                   src="./data/images-in-paper/demo2/condition/fire.jpg"
@@ -264,9 +267,6 @@
                   class="first-img"
                   src="./data/images-in-paper/demo2/condition/yarn.jpg"
                 />
-                <!-- <p> -->
-                <!-- fdas -->
-                <!-- </p> -->
               </div>
             </div>
           </div>
