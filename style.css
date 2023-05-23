@@ -169,6 +169,7 @@ p code {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  cursor: pointer;
 }
 .mode_choose:focus {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
@@ -279,6 +280,13 @@ p code {
 /* cilcked effect */
 .clicked-image {
   border: 4px solid rgb(0, 162, 255);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.clicked-animal {
+  border: 4px solid rgb(0, 162, 255);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* demo Subject-driven Image Editing */

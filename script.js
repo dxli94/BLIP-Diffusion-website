@@ -28,6 +28,7 @@ fetch("data.json")
         imgText.style.marginBottom = "10px"
         // make font size larger
         imgText.style.fontSize = "15px"
+        img.style.cursor = "pointer"
 
         img.src = data[i]
         img.style.width = "120px"
@@ -51,6 +52,7 @@ fetch("data.json")
         imgText.style.marginBottom = "10px"
         // make font size larger
         imgText.style.fontSize = "20px"
+        img.style.cursor = "pointer"
 
         img.src = data[i]
         img.style.width = "245px"
@@ -249,22 +251,64 @@ slider1.addEventListener("input", () =>
 //Subject-driven Image Editing
 const orgImage = document.querySelector(".org-image img")
 const editingImages = document.querySelectorAll(".edited-img img")
+const reset = document.querySelector("#reset")
+reset.addEventListener("click", () => {
+  orgImage.src = "data/images-in-paper/demo-editing/original.png"
+  editingImages.forEach((img) => {
+    img.classList.remove("clicked-animal")
+  })
+})
 
 editingImages.forEach((image) => {
   image.addEventListener("click", () => {
-    const imagePath = image.src
-    const updatedPath = imagePath.replace(".jpg", "-edited.png")
+    const edImagePath = image.src
+    const updatedPath = edImagePath.replace(".jpg", "-edited.png")
     orgImage.src = updatedPath
 
     // Remove "clicked-image" class from all images
-    editingImages.forEach((img) => img.classList.remove("clicked-image"))
+    editingImages.forEach((img) => img.classList.remove("clicked-animal"))
 
     // Add "clicked-image" class to the clicked image
-    image.classList.add("clicked-image")
+    image.classList.add("clicked-animal")
   })
 })
 // picture combination
 // Get the images and the output image element
+const fileDictionary = {
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/sculpture-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/scuplture-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/sculpture-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/scuplture-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-yarn.png",
+}
+
 const inputImages = document.querySelectorAll(".input-image img")
 
 const imgContainerImages = document.querySelectorAll(".guiding-subjuects img")
@@ -305,39 +349,4 @@ function generateNew() {
     imagePath += src
   }
   outputImage.src = fileDictionary[imagePath]
-}
-
-const fileDictionary = {
-  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/sculpture-fire.png",
-  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/scuplture-flower.png",
-  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/sculpture-glass.png",
-  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/scuplture-yarn.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-flower.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-glass.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-yarn.png",
-  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/blip-fire.png",
-  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/blip-flower.png",
-  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/blip-glass.png",
-  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/blip-yarn.png",
-  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/hf-fire.png",
-  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/hf-flower.png",
-  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/hf-glass.png",
-  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/hf-yarn.png",
 }
