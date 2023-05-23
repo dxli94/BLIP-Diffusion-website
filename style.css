@@ -5,6 +5,7 @@ body {
   font-family: "Open-Sans", sans-serif;
   font-weight: 300;
   background-color: #fff;
+  box-sizing: border-box;
 }
 .content {
   width: 1000px;
@@ -307,7 +308,7 @@ p code {
   padding: 0px 1px;
 }
 .left-img {
-  padding: 1px 15px;
+  margin: 1px 15px;
   /* padding-top: 5px; */
   /* margin-bottom: 10px; */
 }
@@ -315,4 +316,8 @@ p code {
   display: flex;
   justify-content: space-between;
   width: 80%;
+}
+/* cilcked effect */
+.clicked-image {
+  border: 4px solid rgb(0, 162, 255); /* Example border style */
 }

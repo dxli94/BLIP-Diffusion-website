@@ -172,43 +172,85 @@ const interp_images1 = [
   // "./data/images-in-paper/demo2/11-x100y25.jpg",
   // "./data/images-in-paper/demo2/12-x100y0.jpg",
   "data/interpolation/0_x0y0.jpg",
-  "data/interpolation/1_x4y0.jpg", "data/interpolation/2_x8y0.jpg", "data/interpolation/3_x12y0.jpg", "data/interpolation/4_x16y0.jpg", "data/interpolation/5_x20y0.jpg", "data/interpolation/6_x24y0.jpg", "data/interpolation/7_x28y0.jpg", "data/interpolation/8_x32y0.jpg", "data/interpolation/9_x36y0.jpg",
-  "data/interpolation/10_x40y0.jpg", "data/interpolation/11_x44y0.jpg", "data/interpolation/12_x48y0.jpg", "data/interpolation/13_x52y0.jpg", "data/interpolation/14_x56y0.jpg", "data/interpolation/15_x60y0.jpg", "data/interpolation/16_x64y0.jpg", "data/interpolation/17_x68y0.jpg", "data/interpolation/18_x72y0.jpg", "data/interpolation/19_x76y0.jpg",
-  "data/interpolation/20_x80y0.jpg", "data/interpolation/21_x84y0.jpg", "data/interpolation/22_x88y0.jpg", "data/interpolation/23_x92y0.jpg", "data/interpolation/24_x96y0.jpg", "data/interpolation/25_x100y0.jpg",
-  "data/interpolation/26_x100y4.jpg", "data/interpolation/27_x100y8.jpg", "data/interpolation/28_x100y12.jpg", "data/interpolation/29_x100y16.jpg", "data/interpolation/30_x100y20.jpg", "data/interpolation/31_x100y24.jpg", "data/interpolation/32_x100y28.jpg", "data/interpolation/33_x100y32.jpg", "data/interpolation/34_x100y36.jpg", "data/interpolation/35_x100y40.jpg",
-  "data/interpolation/36_x100y44.jpg", "data/interpolation/37_x100y48.jpg", "data/interpolation/38_x100y52.jpg", "data/interpolation/39_x100y56.jpg", "data/interpolation/40_x100y60.jpg", "data/interpolation/41_x100y64.jpg", "data/interpolation/42_x100y68.jpg", "data/interpolation/43_x100y72.jpg", "data/interpolation/44_x100y76.jpg", "data/interpolation/45_x100y80.jpg",
-  "data/interpolation/46_x100y84.jpg", "data/interpolation/47_x100y88.jpg", "data/interpolation/48_x100y92.jpg", "data/interpolation/49_x100y96.jpg", "data/interpolation/50_x100y100.jpg",
-  "data/interpolation/51_x96y100.jpg", "data/interpolation/52_x92y100.jpg", "data/interpolation/53_x88y100.jpg", "data/interpolation/54_x84y100.jpg", "data/interpolation/55_x80y100.jpg", "data/interpolation/56_x76y100.jpg", "data/interpolation/57_x72y100.jpg", "data/interpolation/58_x68y100.jpg", "data/interpolation/59_x64y100.jpg", "data/interpolation/60_x60y100.jpg",
-  "data/interpolation/61_x56y100.jpg", "data/interpolation/62_x52y100.jpg", "data/interpolation/63_x48y100.jpg", "data/interpolation/64_x44y100.jpg", "data/interpolation/65_x40y100.jpg", "data/interpolation/66_x36y100.jpg", "data/interpolation/67_x32y100.jpg", "data/interpolation/68_x28y100.jpg", "data/interpolation/69_x24y100.jpg", "data/interpolation/70_x20y100.jpg",
-  "data/interpolation/71_x16y100.jpg", "data/interpolation/72_x12y100.jpg", "data/interpolation/73_x8y100.jpg", "data/interpolation/74_x4y100.jpg", "data/interpolation/75_x0y100.jpg",
+  "data/interpolation/1_x4y0.jpg",
+  "data/interpolation/2_x8y0.jpg",
+  "data/interpolation/3_x12y0.jpg",
+  "data/interpolation/4_x16y0.jpg",
+  "data/interpolation/5_x20y0.jpg",
+  "data/interpolation/6_x24y0.jpg",
+  "data/interpolation/7_x28y0.jpg",
+  "data/interpolation/8_x32y0.jpg",
+  "data/interpolation/9_x36y0.jpg",
+  "data/interpolation/10_x40y0.jpg",
+  "data/interpolation/11_x44y0.jpg",
+  "data/interpolation/12_x48y0.jpg",
+  "data/interpolation/13_x52y0.jpg",
+  "data/interpolation/14_x56y0.jpg",
+  "data/interpolation/15_x60y0.jpg",
+  "data/interpolation/16_x64y0.jpg",
+  "data/interpolation/17_x68y0.jpg",
+  "data/interpolation/18_x72y0.jpg",
+  "data/interpolation/19_x76y0.jpg",
+  "data/interpolation/20_x80y0.jpg",
+  "data/interpolation/21_x84y0.jpg",
+  "data/interpolation/22_x88y0.jpg",
+  "data/interpolation/23_x92y0.jpg",
+  "data/interpolation/24_x96y0.jpg",
+  "data/interpolation/25_x100y0.jpg",
+  "data/interpolation/26_x100y4.jpg",
+  "data/interpolation/27_x100y8.jpg",
+  "data/interpolation/28_x100y12.jpg",
+  "data/interpolation/29_x100y16.jpg",
+  "data/interpolation/30_x100y20.jpg",
+  "data/interpolation/31_x100y24.jpg",
+  "data/interpolation/32_x100y28.jpg",
+  "data/interpolation/33_x100y32.jpg",
+  "data/interpolation/34_x100y36.jpg",
+  "data/interpolation/35_x100y40.jpg",
+  "data/interpolation/36_x100y44.jpg",
+  "data/interpolation/37_x100y48.jpg",
+  "data/interpolation/38_x100y52.jpg",
+  "data/interpolation/39_x100y56.jpg",
+  "data/interpolation/40_x100y60.jpg",
+  "data/interpolation/41_x100y64.jpg",
+  "data/interpolation/42_x100y68.jpg",
+  "data/interpolation/43_x100y72.jpg",
+  "data/interpolation/44_x100y76.jpg",
+  "data/interpolation/45_x100y80.jpg",
+  "data/interpolation/46_x100y84.jpg",
+  "data/interpolation/47_x100y88.jpg",
+  "data/interpolation/48_x100y92.jpg",
+  "data/interpolation/49_x100y96.jpg",
+  "data/interpolation/50_x100y100.jpg",
+  "data/interpolation/51_x96y100.jpg",
+  "data/interpolation/52_x92y100.jpg",
+  "data/interpolation/53_x88y100.jpg",
+  "data/interpolation/54_x84y100.jpg",
+  "data/interpolation/55_x80y100.jpg",
+  "data/interpolation/56_x76y100.jpg",
+  "data/interpolation/57_x72y100.jpg",
+  "data/interpolation/58_x68y100.jpg",
+  "data/interpolation/59_x64y100.jpg",
+  "data/interpolation/60_x60y100.jpg",
+  "data/interpolation/61_x56y100.jpg",
+  "data/interpolation/62_x52y100.jpg",
+  "data/interpolation/63_x48y100.jpg",
+  "data/interpolation/64_x44y100.jpg",
+  "data/interpolation/65_x40y100.jpg",
+  "data/interpolation/66_x36y100.jpg",
+  "data/interpolation/67_x32y100.jpg",
+  "data/interpolation/68_x28y100.jpg",
+  "data/interpolation/69_x24y100.jpg",
+  "data/interpolation/70_x20y100.jpg",
+  "data/interpolation/71_x16y100.jpg",
+  "data/interpolation/72_x12y100.jpg",
+  "data/interpolation/73_x8y100.jpg",
+  "data/interpolation/74_x4y100.jpg",
+  "data/interpolation/75_x0y100.jpg",
 ]
-// add paths
-// for (let i = 1; i < 26; i++) {
-//   let path = `./data/images-in-paper/demo2/interp${i}.jpg`
-//   interp_images1.push(path)
-// }
 
-// const interp_images1 = [
-//   "./data/x0y0.jpg",
-//   "./data/x0y25.jpg",
-//   "./data/x0y50.jpg",
-//   "./data/x0y75.jpg",
-//   "./data/x0y100.jpg",
-// Add the paths of the remaining 16 images here
-// "./data/x0y20.jpg",
-// "./data/x0y25.jpg",
-// ...
-// "./data/x0y95.jpg",
-// "./data/x0y100.jpg"
-// ]
-// const interp_images2 = [
-//   "./data/x0y100.jpg",
-//   "./data/x0y75.jpg",
-//   "./data/x0y0.jpg",
-//   "./data/x0y25.jpg",
-//   "./data/x0y50.jpg",
-// ]
 const image1 = document.getElementById("interp-img1")
+
 const slider1 = document.getElementById("interp-range1")
 // const image2 = document.getElementById("interp-img2")
 // const slider2 = document.getElementById("interp-range2")
@@ -228,3 +270,118 @@ slider1.addEventListener("input", () =>
 // )
 
 // picture combination
+// Get the images and the output image element
+const inputImages = document.querySelectorAll(".input-image img")
+
+const imgContainerImages = document.querySelectorAll(".guiding-subjuects img")
+
+const outputImage = document.getElementById("generate-img")
+
+// add clicked class
+inputImages.forEach((images) => {
+  images.addEventListener("click", () => {
+    // Remove "clicked-image" class from all images
+    inputImages.forEach((img) => img.classList.remove("clicked-image"))
+
+    // Add "clicked-image" class to the clicked image
+    images.classList.add("clicked-image")
+    generateNew()
+    // let clickedImage = document.querySelectorAll(".clicked-image")
+    // let imagePath = ""
+
+    // for (let i = 0; i < clickedImage.length; i++) {
+    //   let src = clickedImage[i].getAttribute("src")
+    //   if (i !== 0) {
+    //     imagePath += ","
+    //   }
+    //   imagePath += src
+    // }
+
+    // console.log(imagePath)
+    // if (
+    //   JSON.stringify(imagePaths) ===
+    //   JSON.stringify([
+    //     "./data/images-in-paper/demo2/ref-subjects/bunny.jpg",
+    //     "./data/images-in-paper/demo2/condition/fire.jpg",
+    //   ])
+    // ) {
+    //   outputImage.src =
+    //     "data/images-in-paper/demo2/stylized-subjects/sculpture-fire.png"
+    // }
+  })
+})
+imgContainerImages.forEach((images) => {
+  images.addEventListener("click", () => {
+    // Remove "selected" class from all images
+    imgContainerImages.forEach((img) => img.classList.remove("clicked-image"))
+
+    // Add "selected" class to the clicked image
+    images.classList.add("clicked-image")
+    generateNew()
+    // let clickedImage = document.querySelectorAll(".clicked-image")
+    // let imagePath = ""
+
+    // for (let i = 0; i < clickedImage.length; i++) {
+    //   let src = clickedImage[i].getAttribute("src")
+    //   if (i !== 0) {
+    //     imagePath += ","
+    //   }
+    //   imagePath += src
+    // }
+    // outputImage.src = fileDictionary[imagePath]
+  })
+})
+
+function generateNew() {
+  let clickedImage = document.querySelectorAll(".clicked-image")
+  let imagePath = ""
+
+  for (let i = 0; i < clickedImage.length; i++) {
+    let src = clickedImage[i].getAttribute("src")
+    if (i !== 0) {
+      imagePath += ","
+    }
+    imagePath += src
+  }
+  outputImage.src = fileDictionary[imagePath]
+  // outputImage.src = "./data/images-in-paper/demo2/condition/fire.jpg"
+  // outputImage.src =
+  // "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png"
+
+  // console.log(fileDictionary[imagePath])
+}
+
+const fileDictionary = {
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/sculpture-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/scuplture-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/sculpture-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/scuplture-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/bunny-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/blip-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/hf-logo.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/hf-yarn.png",
+}
