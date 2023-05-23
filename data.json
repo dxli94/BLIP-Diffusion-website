@@ -33,7 +33,7 @@
   ],
   "d1_images_e2": [
     "data/images-in-paper/demo1/teapot/in-the-jungle1.jpg",
-    "data/images-in-paper/demo1/teapot/01.jpg",
+    "data/images-in-paper/demo1/teapot/04.jpg",
     "data/images-in-paper/demo1/teapot/with-a-tree-and-autumn-leaves-in-the-background0.jpg",
     "data/images-in-paper/demo1/teapot/with-a-wheat-field-in-the-background3.jpg"
   ],
@@ -66,14 +66,14 @@
   "d1_images_e3": [
     "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
     "data/images-in-paper/demo1/dog/wearing-a-santa-hat1.jpg",
-    "data/images-in-paper/demo1/dog/in-the-snow2.jpg",
-    "data/images-in-paper/demo1/dog/04.jpg"
+    "data/images-in-paper/demo1/dog/with-a-blue-house-in-the-background3.jpg",
+    "data/images-in-paper/demo1/dog/02.jpg"
   ],
   "d1_captions_e3": [
     "A cube-shaped dog.",
     "A dog wearing a Santa hat.",
-    "A dog in the snow.",
-    "A dog on the sidewalk of a street."
+    "A dog with a blue house in the background.",
+    "A dog with cherry blossoms in the background."
   ],
   "d1_images_h3": [
     "data/images-in-paper/demo1/dog/cube-shaped3.jpg",
