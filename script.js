@@ -93,8 +93,6 @@ fetch("data.json")
       // clear the last image
       imageContainer[3].innerHTML = ""
       imageContainer[4].innerHTML = ""
-      // renderEasy(imageContainer[0], easy_images, jsonData.easy_captions1)
-      // renderEasy(imageContainer[1], test_easy, jsonData.easy_captions2)
 
       flipImg()
 
@@ -155,19 +153,6 @@ fetch("data.json")
 // the first path is data/images-in-paper/demo2/interp1.jpg
 // the last path is data/images-in-paper/demo2/interp25.jpg
 const interp_images1 = [
-  // "./data/images-in-paper/demo2/0-x0y0.jpg",
-  // "./data/images-in-paper/demo2/1-x0y25.jpg",
-  // "./data/images-in-paper/demo2/2-x0y50.jpg",
-  // "./data/images-in-paper/demo2/3-x0y75.jpg",
-  // "./data/images-in-paper/demo2/4-x0y100.jpg",
-  // "./data/images-in-paper/demo2/5-x25y100.jpg",
-  // "./data/images-in-paper/demo2/6-x50y100.jpg",
-  // "./data/images-in-paper/demo2/7-x75y100.jpg",
-  // "./data/images-in-paper/demo2/8-x100y100.jpg",
-  // "./data/images-in-paper/demo2/9-x100y75.jpg",
-  // "./data/images-in-paper/demo2/10-x100y50.jpg",
-  // "./data/images-in-paper/demo2/11-x100y25.jpg",
-  // "./data/images-in-paper/demo2/12-x100y0.jpg",
   "data/interpolation/0_x0y0.jpg",
   "data/interpolation/1_x4y0.jpg",
   "data/interpolation/2_x8y0.jpg",
@@ -249,8 +234,6 @@ const interp_images1 = [
 const image1 = document.getElementById("interp-img1")
 
 const slider1 = document.getElementById("interp-range1")
-// const image2 = document.getElementById("interp-img2")
-// const slider2 = document.getElementById("interp-range2")
 
 // Function to change the image source based on the slider value
 function changeImage(slider, image, images) {
@@ -262,10 +245,18 @@ function changeImage(slider, image, images) {
 slider1.addEventListener("input", () =>
   changeImage(slider1, image1, interp_images1)
 )
-// slider2.addEventListener("input", () =>
-//   changeImage(slider2, image2, interp_images2)
-// )
 
+//Subject-driven Image Editing
+const orgImage = document.querySelector(".org-image img")
+const editingImages = document.querySelectorAll(".edited-img img")
+
+editingImages.forEach((image) => {
+  image.addEventListener("click", () => {
+    const imagePath = image.src
+    const updatedPath = imagePath.replace(".jpg", "-edited.png")
+    orgImage.src = updatedPath
+  })
+})
 // picture combination
 // Get the images and the output image element
 const inputImages = document.querySelectorAll(".input-image img")
