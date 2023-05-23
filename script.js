@@ -244,9 +244,43 @@ function changeImage(slider, image, images) {
 }
 
 // Event listener for the slider input
-slider1.addEventListener("input", () =>
-  changeImage(slider1, image1, interp_images1)
-)
+// slider1.addEventListener("input", () =>
+//   changeImage(slider1, image1, interp_images1)
+// )
+
+function preloadImages(images) {
+  let loadedImages = [];
+  let promises = [];
+
+  for (let i = 0; i < images.length; i++) {
+    let img = new Image();
+    loadedImages.push(img);
+
+    let promise = new Promise((resolve, reject) => {
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+
+    img.src = images[i];
+    promises.push(promise);
+  }
+
+  return Promise.all(promises).then(() => loadedImages);
+}
+
+// Usage:
+preloadImages(interp_images1).then(() => {
+  // All images are preloaded, you can now use the images.
+  // Event listener for the slider input
+  slider1.addEventListener("input", () =>
+    changeImage(slider1, image1, interp_images1)
+  );
+}).catch((error) => {
+  // Handle errors if any image fails to load
+  console.error("Image preloading failed:", error);
+});
+
+
 
 //Subject-driven Image Editing
 const orgImage = document.querySelector(".org-image img")
