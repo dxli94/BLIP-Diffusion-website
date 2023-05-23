@@ -285,14 +285,16 @@ p code {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #04aa6d;
+  /* background: #04aa6d; */
+  background: rgb(0, 162, 255);
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #04aa6d;
+  /* background: #04aa6d; */
+  background: rgb(0, 162, 255);
   cursor: pointer;
 }
 .img-container {
