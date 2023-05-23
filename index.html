@@ -344,8 +344,11 @@
       <p>
         For ControlNet, we attach the U-Net of the pre-trained ControlNet to
         that of BLIP-Diffusion via residuals. In this way, the model takes into account the input structure condition, such as edge maps and depth maps, in addition to the subject cues.
-        For subject-driven image editing, we extract automatically an editing region to edit using attention maps. Then we edit the image with subject-specific visuals. We refer the paper for
-        more details.
+        Since our model inherits the architecture of the original latent diffusion model, we observe satisfying generations using off-the-shelf integration with pre-trained ControlNet without further training
+      </p>
+      <p>
+        For subject-driven image editing, we extract automatically an editing region to edit using attention maps. We mix the denoising latents at each step based on the extracted editing mask. Namely, latents of the unedited regions are from the original generation whereas latents of the edited regions are from the subject-driven generation. In this way, we obtain
+        the edited image with subject-specific visuals while also preserving the unedited regions.
       </p>
     </div>
     <!-- <div class="content">
