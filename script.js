@@ -79,9 +79,6 @@ fetch("data.json")
       renderHard(imageContainer[3], d1_images_h4, jsonData.d1_captions_h4)
       renderHard(imageContainer[4], d1_images_h5, jsonData.d1_captions_h5)
 
-      // renderHard(imageContainer[0], hard_images, jsonData.hard_captions1)
-      // renderHard(imageContainer[1], test_hard, jsonData.hard_captions2)
-
       flipImg()
 
       // Disable the button after adding the picture
@@ -128,9 +125,6 @@ fetch("data.json")
           } else {
             this.src = "./data/false-reverse.png"
           }
-          // this.src = "./data/true_mark.jpeg"
-
-          // Replace with the new image source
         }
         this.classList.toggle("flipped")
       }
@@ -249,20 +243,20 @@ function changeImage(slider, image, images) {
 // )
 
 async function preloadImages(images) {
-  let loadedImages = [];
-  let promises = [];
+  let loadedImages = []
+  let promises = []
 
   for (let i = 0; i < images.length; i++) {
-    let img = new Image();
-    loadedImages.push(img);
+    let img = new Image()
+    loadedImages.push(img)
 
     let promise = new Promise((resolve, reject) => {
-      img.onload = resolve;
-      img.onerror = reject;
-    });
+      img.onload = resolve
+      img.onerror = reject
+    })
 
-    img.src = images[i];
-    promises.push(promise);
+    img.src = images[i]
+    promises.push(promise)
   }
 
   await Promise.all(promises)
@@ -270,18 +264,18 @@ async function preloadImages(images) {
 }
 
 // Usage:
-preloadImages(interp_images1).then(() => {
-  // All images are preloaded, you can now use the images.
-  // Event listener for the slider input
-  slider1.addEventListener("input", () =>
-    changeImage(slider1, image1, interp_images1)
-  );
-}).catch((error) => {
-  // Handle errors if any image fails to load
-  console.error("Image preloading failed:", error);
-});
-
-
+preloadImages(interp_images1)
+  .then(() => {
+    // All images are preloaded, you can now use the images.
+    // Event listener for the slider input
+    slider1.addEventListener("input", () =>
+      changeImage(slider1, image1, interp_images1)
+    )
+  })
+  .catch((error) => {
+    // Handle errors if any image fails to load
+    console.error("Image preloading failed:", error)
+  })
 
 //Subject-driven Image Editing
 const orgImage = document.querySelector(".org-image img")
@@ -306,7 +300,7 @@ editingImages.forEach((image) => {
 
     // Add "clicked-image" class to the clicked image
     image.classList.add("clicked-animal")
-    updatedPaths.push(updatedPath); // Add updatedPath to the list
+    updatedPaths.push(updatedPath) // Add updatedPath to the list
   })
 })
 
@@ -323,14 +317,6 @@ const fileDictionary = {
     "data/images-in-paper/demo2/stylized-subjects/sculpture-glass.png",
   "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
     "data/images-in-paper/demo2/stylized-subjects/scuplture-yarn.png",
-  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
-  //   "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png",
-  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
-  //   "data/images-in-paper/demo2/stylized-subjects/bunny-flower.png",
-  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
-  //   "data/images-in-paper/demo2/stylized-subjects/bunny-glass.png",
-  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
-  //   "data/images-in-paper/demo2/stylized-subjects/bunny-yarn.png",
   "./data/images-in-paper/demo2/ref-subjects/pot.jpeg,./data/images-in-paper/demo2/condition/fire.jpg":
     "data/images-in-paper/demo2/stylized-subjects/pot-fire.png",
   "./data/images-in-paper/demo2/ref-subjects/pot.jpeg,./data/images-in-paper/demo2/condition/flower.jpg":
@@ -357,8 +343,8 @@ const fileDictionary = {
     "data/images-in-paper/demo2/stylized-subjects/hf-yarn.png",
 }
 
-const stylizedFileList = Object.values(fileDictionary);
-preloadImages(stylizedFileList);
+const stylizedFileList = Object.values(fileDictionary)
+preloadImages(stylizedFileList)
 
 const inputImages = document.querySelectorAll(".input-image img")
 

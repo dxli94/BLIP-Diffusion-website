@@ -313,3 +313,10 @@ p code {
   box-sizing: border-box;
   cursor: pointer;
 }
+.showcase {
+  display: flex;
+}
+.showcase img {
+  width: calc(33.33% - 10px);
+  margin: 0px 10px 10px 0;
+}
