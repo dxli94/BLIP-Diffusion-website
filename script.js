@@ -287,6 +287,7 @@ preloadImages(interp_images1).then(() => {
 const orgImage = document.querySelector(".org-image img")
 const editingImages = document.querySelectorAll(".edited-img img")
 const reset = document.querySelector("#reset")
+const updatedPaths = []
 reset.addEventListener("click", () => {
   orgImage.src = "data/images-in-paper/demo-editing/original.png"
   editingImages.forEach((img) => {
@@ -305,8 +306,12 @@ editingImages.forEach((image) => {
 
     // Add "clicked-image" class to the clicked image
     image.classList.add("clicked-animal")
+    updatedPaths.push(updatedPath); // Add updatedPath to the list
   })
 })
+
+preloadImages(updatedPaths)
+
 // picture combination
 // Get the images and the output image element
 const fileDictionary = {
