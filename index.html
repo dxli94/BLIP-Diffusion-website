@@ -156,13 +156,13 @@
     <div class="content">
       <h2 style="text-align: center">Demo II: Subject-driven Image Editing</h2>
       <p>
-        Our model can edit source images with subject-specific visuals. We refer this
-        task as <i>subject-driven image editing</i>. The following examples show
-        results of such applications. <strong>On the left</strong>, we show the
-        source image we'd like to edit. <strong>On the right</strong>, we show
-        images of subjects we'd like to edit the source image with. For example,
-        in the first image of squirrel, we aim to edit the source image by
-        replacing the dog with the squirrel. In the meantime, the background
+        Our model can edit source images with subject-specific visuals. We refer
+        this task as <i>subject-driven image editing</i>. The following examples
+        show results of such applications. <strong>On the left</strong>, we show
+        the source image we'd like to edit. <strong>On the right</strong>, we
+        show images of subjects we'd like to edit the source image with. For
+        example, in the first image of squirrel, we aim to edit the source image
+        by replacing the dog with the squirrel. In the meantime, the background
         should be preserved. Note how postures of the subjects naturally fit
         into the source image. This shows that the editing process is not just a
         simple copy-and-paste.
@@ -196,60 +196,96 @@
         </div>
       </div>
       <p>
-        We can also use fine-tuned model to enable editing with highly-customized subjects.
-        The appearance of the subjects are well preserved. Also note the lighting on the subjects are nicely blended into the source image, e.g. the vase example.
+        We can also use fine-tuned model to enable editing with
+        highly-customized subjects. The appearance of the subjects are well
+        preserved. Also note the lighting on the subjects are nicely blended
+        into the source image, e.g. the vase example.
       </p>
 
       <div class="showcase">
         <div class="image-box">
+          <p style="margin: 0">source image</p>
           <img src="data/images-in-paper/demo-editing/cake-src.png" />
-          <p>source image <br> <i>a burger on the sea with sunset.</i></p>
+          <p>
+            <i>a burger on the sea with sunset.</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">subject imagee</p>
           <img src="data/images-in-paper/demo-editing/cake-subj.png" />
-          <p>subject image <br> <i>cake</i></p>
+          <p>
+            <i>cake</i>
+          </p>
         </div>
+
         <div class="image-box" style="margin-right: 20px">
+          <p style="margin: 0">editing output</p>
           <img src="data/images-in-paper/demo-editing/cake-out.png" />
-          <p>editing output <br>  <i>a cake on the sea with sunset.</i></p>
+          <p>
+            <i>a cake on the sea with sunset.</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">source image</p>
           <img src="data/images-in-paper/demo-editing/vase-src.png" />
-          <p>source image  <br>  <i>a vase with weed in the mountain.</i></p>
+          <p>
+            <i>a vase with weed in the mountain.</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">subject image</p>
           <img src="data/images-in-paper/demo-editing/vase-subj.png" />
-          <p>subject image  <br>  <i>vase</i></p>
+          <p>
+            <i>vase</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">editing output</p>
+
           <img src="data/images-in-paper/demo-editing/vase-out.png" />
-          <p>editing output <br>  <i>a vase with weed in the mountain.</i> </p>
+          <p>
+            <i>a vase with weed in the mountain.</i>
+          </p>
         </div>
       </div>
       <div class="showcase">
         <div class="image-box">
+          <p style="margin: 0">source image</p>
           <img src="data/images-in-paper/demo-editing/flouffy-dog-src.png" />
-          <p>source image  <br>  <i>a dog, cyberpunk character ...</i></p>
+          <p>
+            <i>a dog, cyberpunk character ...</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">subject image</p>
           <img src="data/images-in-paper/demo-editing/flouffy-dog-subj.png" />
-          <p>subject image <br>  <i>dog</i></p>
+          <p>
+            <i>dog</i>
+          </p>
         </div>
         <div class="image-box" style="margin-right: 20px">
+          <p style="margin: 0">editing output</p>
           <img src="data/images-in-paper/demo-editing/flouffy-dog-out.png" />
-          <p>editing output  <br>  <i>a dog, cyberpunk character ...</i></p>
+          <p>
+            <i>a dog, cyberpunk character ...</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">source image</p>
           <img src="data/images-in-paper/demo-editing/unsplash-bird-src.png" />
-          <p>source image <br><i>a dog on the grass, oil painting.</i></p>
+          <p><i>a dog on the grass, oil painting.</i></p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">subject image</p>
           <img src="data/images-in-paper/demo-editing/unsplash-bird-subj.jpg" />
-          <p>subject image  <br>  <i>bird</i></p>
+          <p>
+            <i>bird</i>
+          </p>
         </div>
         <div class="image-box">
+          <p style="margin: 0">editing output</p>
           <img src="data/images-in-paper/demo-editing/unsplash-bird-out.png" />
-          <p>editing output  <i>a bird on the grass, oil painting.</i></p>
+          <p><i>a bird on the grass, oil painting.</i></p>
         </div>
       </div>
     </div>
@@ -258,19 +294,27 @@
         Demo III: Zero-shot Subject-driven Image Manipulation
       </h2>
       <p>
-        Our model is able to extract subject features to guide the generation. In addition to applications of subject-driven generations and editing, we show that such pre-trained subject representation enables intriguing and useful applications of zero-shot image manipulation, including subject-driven style transfer and subject interpolation.
+        Our model is able to extract subject features to guide the generation.
+        In addition to applications of subject-driven generations and editing,
+        we show that such pre-trained subject representation enables intriguing
+        and useful applications of zero-shot image manipulation, including
+        subject-driven style transfer and subject interpolation.
       </p>
       <p>
-        <strong>Left</strong>: subject interpolation.  It is also possible to blend two subject representation to generate subjects with a hybrid appearance. This can be achieved by traversing the embedding trajectory between subjects.
-        <strong>
-        Drag the slider to see the interpolation results.
-        </strong>
+        <strong>Left</strong>: subject interpolation. It is also possible to
+        blend two subject representation to generate subjects with a hybrid
+        appearance. This can be achieved by traversing the embedding trajectory
+        between subjects.
+        <strong> Drag the slider to see the interpolation results. </strong>
       </p>
       <p>
-        <strong>Right</strong>: subject-driven style transfer. When provided with a subject, the model can encode the appearance
-        style of it and transfer to other subjects. We refer such an application as subject-driven style transfer.
+        <strong>Right</strong>: subject-driven style transfer. When provided
+        with a subject, the model can encode the appearance style of it and
+        transfer to other subjects. We refer such an application as
+        subject-driven style transfer.
         <strong>
-        Click on different reference and guiding subjects to see the style transfer results.
+          Click on different reference and guiding subjects to see the style
+          transfer results.
         </strong>
       </p>
 
