@@ -322,6 +322,7 @@ p code {
 }
 .showcase .image-box p {
   text-align: center;
+  margin-top: 5px;
 }
 .showcase .image-box img {
   width: 100%;
