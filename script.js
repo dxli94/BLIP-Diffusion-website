@@ -23,14 +23,9 @@ fetch("data.json")
         const img = document.createElement("img")
         const imgText = document.createElement("div")
         imgText.textContent = caption[i]
-        imgText.style.fontStyle = "italic"
-        imgText.style.textAlign = "center"
-        // add a slight margin below the image
-        imgText.style.marginBottom = "10px"
-        // make font size larger
-        imgText.style.fontSize = "15px"
-        img.style.cursor = "pointer"
+        imgText.classList.add("img-caption")
 
+        img.style.cursor = "pointer"
         img.src = data[i]
         img.style.width = "120px"
         picContainer.appendChild(img)
@@ -47,12 +42,10 @@ fetch("data.json")
 
         const img = document.createElement("img")
         const imgText = document.createElement("div")
-        imgText.style.fontStyle = "italic"
+
         imgText.textContent = caption[i]
-        imgText.style.textAlign = "center"
-        // add a 10px margin below the image
-        imgText.style.marginBottom = "10px"
-        // make font size larger
+        imgText.classList.add("img-caption")
+
         imgText.style.fontSize = "20px"
         img.style.cursor = "pointer"
 
