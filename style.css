@@ -316,7 +316,17 @@ p code {
 .showcase {
   display: flex;
 }
-.showcase img {
+.showcase .image-box {
+  width: 18%;
+  margin-left: 5px;
+}
+.showcase .image-box p {
+  text-align: center;
+}
+.showcase .image-box img {
+  width: 100%;
+}
+/* .showcase div {
   width: calc(16.5% - 5px);
   margin: 0px 5px 10px 0;
-}
+} */
