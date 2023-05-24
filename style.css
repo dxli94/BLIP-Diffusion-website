@@ -306,10 +306,17 @@ p code {
   max-height: 300px;
   margin-left: 10px;
 }
-.edited-img img {
+/* .edited-img img {
   width: calc(25% - 10px);
   height: auto;
   margin: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+} */
+.edited-img img {
+  width: calc(25% - 10px);
+  height: auto;
+  margin: 0px 5px 3px 0;
   box-sizing: border-box;
   cursor: pointer;
 }
