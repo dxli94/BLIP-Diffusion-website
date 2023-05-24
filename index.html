@@ -207,6 +207,23 @@
       <h2 style="text-align: center">
         Demo III: Zero-shot Subject-driven Image Manipulation
       </h2>
+      <p>
+        Our model is able to extract subject features to guide the generation. In addition to applications of subject-driven generations and editing, we show that such pre-trained subject representation enables intriguing and useful applications of zero-shot image manipulation, including subject-driven style transfer and subject interpolation.
+      </p>
+      <p>
+        <strong>Left</strong>: subject interpolation.  It is also possible to blend two subject representation to generate subjects with a hybrid appearance. This can be achieved by traversing the embedding trajectory between subjects.
+        <strong>
+        Drag the slider to see the interpolation results.
+        </strong>
+      </p>
+      <p>
+        <strong>Right</strong>: subject-driven style transfer. When provided with a subject, the model can encode the appearance
+        style of it and transfer to other subjects. We refer such an application as subject-driven style transfer.
+        <strong>
+        Click on different reference and guiding subjects to see the style transfer results.
+        </strong>
+      </p>
+
       <div class="img-slider">
         <div class="cat-main">
           <i
@@ -218,7 +235,7 @@
                 font-size: 1.5rem;
               "
             >
-              Subject Interpolation (Drag the Slider!)
+              Subject Interpolation
             </p></i
           >
           <img
