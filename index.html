@@ -156,7 +156,7 @@
     <div class="content">
       <h2 style="text-align: center">Demo II: Subject-driven Image Editing</h2>
       <p>
-        Our model can edit images with subject-specific visuals. We refer this
+        Our model can edit source images with subject-specific visuals. We refer this
         task as <i>subject-driven image editing</i>. The following examples show
         results of such applications. <strong>On the left</strong>, we show the
         source image we'd like to edit. <strong>On the right</strong>, we show
@@ -199,30 +199,57 @@
         We can also use fine-tuned model to enable editing with highly-customized subjects.
         The appearance of the subjects are well preserved. Also note the lighting on the subjects are nicely blended into the source image, e.g. the vase example.
       </p>
+
       <div class="showcase">
         <div class="image-box">
           <img src="data/images-in-paper/demo-editing/cake-src.png" />
-          <p>source image</p>
+          <p>source image <br> <i>a burger on the sea with sunset.</i></p>
         </div>
         <div class="image-box">
           <img src="data/images-in-paper/demo-editing/cake-subj.png" />
-          <p>subject image</p>
+          <p>subject image <br> <i>cake</i></p>
         </div>
         <div class="image-box" style="margin-right: 20px">
           <img src="data/images-in-paper/demo-editing/cake-out.png" />
-          <p>editing output</p>
+          <p>editing output <br>  <i>a cake on the sea with sunset.</i></p>
         </div>
         <div class="image-box">
           <img src="data/images-in-paper/demo-editing/vase-src.png" />
-          <p>source image</p>
+          <p>source image  <br>  <i>a vase with weed in the mountain.</i></p>
         </div>
         <div class="image-box">
           <img src="data/images-in-paper/demo-editing/vase-subj.png" />
-          <p>subject image</p>
+          <p>subject image  <br>  <i>vase</i></p>
         </div>
         <div class="image-box">
           <img src="data/images-in-paper/demo-editing/vase-out.png" />
-          <p>editing output</p>
+          <p>editing output <br>  <i>a vase with weed in the mountain.</i> </p>
+        </div>
+      </div>
+      <div class="showcase">
+        <div class="image-box">
+          <img src="data/images-in-paper/demo-editing/flouffy-dog-src.png" />
+          <p>source image  <br>  <i>a dog, cyberpunk character ...</i></p>
+        </div>
+        <div class="image-box">
+          <img src="data/images-in-paper/demo-editing/flouffy-dog-subj.png" />
+          <p>subject image <br>  <i>dog</i></p>
+        </div>
+        <div class="image-box" style="margin-right: 20px">
+          <img src="data/images-in-paper/demo-editing/flouffy-dog-out.png" />
+          <p>editing output  <br>  <i>a dog, cyberpunk character ...</i></p>
+        </div>
+        <div class="image-box">
+          <img src="data/images-in-paper/demo-editing/unsplash-bird-src.png" />
+          <p>source image <br><i>a dog in the outer space, oil painting.</i></p>
+        </div>
+        <div class="image-box">
+          <img src="data/images-in-paper/demo-editing/unsplash-bird-subj.jpg" />
+          <p>subject image  <br>  <i>bird</i></p>
+        </div>
+        <div class="image-box">
+          <img src="data/images-in-paper/demo-editing/unsplash-bird-out.png" />
+          <p>editing output  <i>a bird in the outer space, oil painting.</i></p>
         </div>
       </div>
     </div>
