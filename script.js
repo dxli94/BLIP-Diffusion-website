@@ -284,10 +284,25 @@ reset.addEventListener("click", () => {
   })
 })
 
+function removeExtension(filePath) {
+  filePath = filePath.replace(".jpg", "");
+  filePath = filePath.replace(".png", "");
+
+  return filePath
+}
+
 editingImages.forEach((image) => {
   image.addEventListener("click", () => {
     const edImagePath = image.src
-    const updatedPath = edImagePath.replace(".jpg", "-edited.png")
+    // remove extension of edImagePath
+    // const edImageFilename = removeExtension(edImagePath)
+    // console.log(edImageFilename)
+
+    // const updatedPath = edImagePath.replace(".jpg", "-edited.png")
+    const updatedPath = edImagePath.replace(/\.(jpg|png)$/, "-edited.png");
+
+    // const updatedPath = edImageFilename + "-edited.png"
+    // const updatedPath = edImagePath.replace(/\.(?!jpg$)\w+$/, "-edited.png");
     orgImage.src = updatedPath
 
     // Remove "clicked-image" class from all images
