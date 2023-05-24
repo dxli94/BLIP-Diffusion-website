@@ -327,7 +327,10 @@ p code {
 .showcase .image-box img {
   width: 100%;
 }
-/* .showcase div {
-  width: calc(16.5% - 5px);
-  margin: 0px 5px 10px 0;
+
+/* .img-caption {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 15px;
 } */

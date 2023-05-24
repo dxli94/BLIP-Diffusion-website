@@ -23,6 +23,7 @@ fetch("data.json")
         const img = document.createElement("img")
         const imgText = document.createElement("div")
         imgText.textContent = caption[i]
+        imgText.style.fontStyle = "italic"
         imgText.style.textAlign = "center"
         // add a slight margin below the image
         imgText.style.marginBottom = "10px"
@@ -46,6 +47,7 @@ fetch("data.json")
 
         const img = document.createElement("img")
         const imgText = document.createElement("div")
+        imgText.style.fontStyle = "italic"
         imgText.textContent = caption[i]
         imgText.style.textAlign = "center"
         // add a 10px margin below the image
