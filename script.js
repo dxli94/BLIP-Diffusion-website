@@ -323,14 +323,22 @@ const fileDictionary = {
     "data/images-in-paper/demo2/stylized-subjects/sculpture-glass.png",
   "./data/images-in-paper/demo2/ref-subjects/sculpture.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
     "data/images-in-paper/demo2/stylized-subjects/scuplture-yarn.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-flower.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-glass.png",
-  "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
-    "data/images-in-paper/demo2/stylized-subjects/bunny-yarn.png",
+  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
+  //   "data/images-in-paper/demo2/stylized-subjects/bunny-fire.png",
+  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
+  //   "data/images-in-paper/demo2/stylized-subjects/bunny-flower.png",
+  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/vase.jpg":
+  //   "data/images-in-paper/demo2/stylized-subjects/bunny-glass.png",
+  // "./data/images-in-paper/demo2/ref-subjects/bunny.jpg,./data/images-in-paper/demo2/condition/yarn.jpg":
+  //   "data/images-in-paper/demo2/stylized-subjects/bunny-yarn.png",
+  "./data/images-in-paper/demo2/ref-subjects/pot.jpeg,./data/images-in-paper/demo2/condition/fire.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/pot-fire.png",
+  "./data/images-in-paper/demo2/ref-subjects/pot.jpeg,./data/images-in-paper/demo2/condition/flower.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/pot-flower.png",
+  "./data/images-in-paper/demo2/ref-subjects/pot.jpeg,./data/images-in-paper/demo2/condition/vase.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/pot-glass.png",
+  "./data/images-in-paper/demo2/ref-subjects/pot.jpeg,./data/images-in-paper/demo2/condition/yarn.jpg":
+    "data/images-in-paper/demo2/stylized-subjects/pot-yarn.png",
   "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/fire.jpg":
     "data/images-in-paper/demo2/stylized-subjects/blip-fire.png",
   "./data/images-in-paper/demo2/ref-subjects/blip-logo.jpg,./data/images-in-paper/demo2/condition/flower.jpg":
